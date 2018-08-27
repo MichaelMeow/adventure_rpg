@@ -16,3 +16,15 @@ body {
 .col-md-9 {
   background-color: yellow;
 }
+
+.hidden-story {
+  display: none;
+}
+
+#createStats {
+  display: none;
+}
+
+#statResultDisplay {
+  display: none;
+}

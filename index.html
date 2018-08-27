@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script
@@ -9,36 +9,70 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
-    <title>Adventure RPG</title>
+  <title>Adventure RPG</title>
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <div class="container-fluid">
-<!--MASTER ROW-->
-      <div class="row">
+  <div class="container-fluid">
+    <!--MASTER ROW-->
+    <div class="row">
 
-  <!--STAT BAR COLUMN-->
-        <div class="col-md-3">
+      <!--STAT BAR COLUMN-->
+      <div class="col-md-3">
 
-          <p>Name: <span id="characterName"></span></p>
-          <p>Strength: <span id="stengthStat"></span></p>
-          <p>Agility: <span id="abiligtyStat"></span></p>
-          <p>Intelligence: <span id="intelligenceStat"></span></p>
-          <p>Charisma: <span id="charismaStat"></span></p>
-
-        </div>
-
-
-        <div class="col-md-9">
-
-<!--STORY RELATED CONTENT-->
-          <div class="story">
-
-          </div>
-        </div>
+        <p>Name: <span id="characterName"></span></p>
+        <p>Strength: <span id="stengthStat"></span></p>
+        <p>Agility: <span id="abiligtyStat"></span></p>
+        <p>Intelligence: <span id="intelligenceStat"></span></p>
+        <p>Charisma: <span id="charismaStat"></span></p>
 
       </div>
+
+
+      <div class="col-md-9">
+
+        <!--STORY RELATED CONTENT-->
+        <div class="hidden-story">
+          <div id="page-one">
+            <!-- Choose a companion -->
+            <p>Our hero finds themselves in a pub, chatting with a coulple of strangers. The stranger on the left is a menacing drunk that seems very tough. The stranger on the right is a scholarly looking gent that has a witty tongue. You need a companion to continue your journey and find both of these characters worthy. Should you pick the drunk or the scholar?</p>
+            <button type="button" id="companion-choice-one" name="drunk">Drunk</button>
+            <button type="button" id="companion-choice-two" name="scholar">Scholar</button>
+
+          </div>
+          <div id="page-two">
+            <!-- Puzzle/Riddle -->
+            <p></p>
+          </div>
+          <div id="page-three">
+            <!-- Stats Test -->
+            <p></p>
+          </div>
+          <div id="page-four">
+            <!-- Death -->
+            <p></p>
+          </div>
+          <div id="page-five">
+            <!-- Direction Choice -->
+            <p></p>
+          </div>
+          <div id="page-six">
+            <!-- Moral Choice -->
+            <p></p>
+          </div>
+          <div id="page-seven">
+          </div>
+          <div id="page-eight">
+          </div>
+          <div id="page-nine">
+          </div>
+          <div id="page-ten">
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 
@@ -46,5 +80,5 @@
 
 
 
-  </body>
+</body>
 </html>

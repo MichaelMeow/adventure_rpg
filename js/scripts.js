@@ -19,7 +19,7 @@ var dice = function() {
 
 // FRONTEND
 $(document).ready(function(){
-
+var storyArray = [[2,3],[4,5],[5,6],[7,5],[9,10],[5,8],[0,0],[0,0]]
 // WHEN THE NAME BUTTON IS CLICKED:
   $("button#nameButton").click(function(){
     $("#createName").hide();
@@ -27,11 +27,9 @@ $(document).ready(function(){
     var characterName = $(".nameInput").val();
     $("#characterName").text(characterName);
     var newCharacter = new Character (characterName)
-    console.log(newCharacter);
     // for (i=0;i<4;i++){
     //   if (i == 0){
     $("#rollText").text("Roll for Strength.")
-        console.log("hi");
 
       var i = 0
 
@@ -60,8 +58,32 @@ $(document).ready(function(){
           $("#charismaStat").text(newCharacter.charisma)
           $("#statResultDisplay").text("Your character's charisma is " + newCharacter.charisma + ".")
           $("#rollText").text("Your journey is about to begin...")
+          $("#diceRollButton").hide();
+          $(".startButton").show();
         }
         i ++;
     });
+
+    $("#start").click(function(){
+      $(".current-story").append($("#1"))
+      $(".startButton").hide();
+      $("#createStats").hide();
+    })
+
+    var currentPage = 1
+
+    $(".a").click(function(){
+      $(".hidden-story").append($("#" + currentPage))
+      var aPage = storyArray[currentPage-1][0]
+      $(".current-story").append($("#" + aPage))
+      currentPage = aPage
+    })
+    $(".b").click(function(){
+      $(".hidden-story").append($("#" + currentPage))
+      var bPage = storyArray[currentPage-1][1]
+      $(".current-story").append($("#" + bPage))
+      currentPage = bPage
+    })
+
   });
 });

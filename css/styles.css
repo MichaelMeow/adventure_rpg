@@ -28,3 +28,7 @@ body {
 #statResultDisplay {
   display: none;
 }
+
+.startButton {
+  display: none;
+}

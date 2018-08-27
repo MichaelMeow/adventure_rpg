@@ -1,0 +1,18 @@
+body {
+  background-color: grey;
+}
+
+.container-fluid {
+  margin-top: 20%;
+}
+
+.row {
+  border: solid black 2px;
+}
+
+.col-md-3 {
+  border: solid black 2px;
+}
+.col-md-9 {
+  background-color: yellow;
+}

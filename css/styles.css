@@ -16,3 +16,7 @@ body {
 .col-md-9 {
   background-color: yellow;
 }
+
+#page-two-a, #page-two-b {
+  display: none;
+}

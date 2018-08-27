@@ -17,6 +17,14 @@ body {
   background-color: yellow;
 }
 
-#page-two-a, #page-two-b {
+.hidden-story {
+  display: none;
+}
+
+#createStats {
+  display: none;
+}
+
+#statResultDisplay {
   display: none;
 }

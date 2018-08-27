@@ -22,8 +22,8 @@
       <div class="col-md-3">
 
         <p>Name: <span id="characterName"></span></p>
-        <p>Strength: <span id="stengthStat"></span></p>
-        <p>Agility: <span id="abiligtyStat"></span></p>
+        <p>Strength: <span id="strengthStat"></span></p>
+        <p>Agility: <span id="agilityStat"></span></p>
         <p>Intelligence: <span id="intelligenceStat"></span></p>
         <p>Charisma: <span id="charismaStat"></span></p>
 
@@ -31,6 +31,32 @@
 
 
       <div class="col-md-9">
+
+<!--CHARACTER CREATION-->
+        <div id="createName">
+          <label for="nameInput">Give us your name, warrior:
+          <input type="text" class="nameInput">
+          </label>
+          <button id="nameButton" type="button">Submit</button>
+        </div>
+
+        <div id="createStats">
+
+          <div id="statResultDisplay">
+            
+          </div>
+          <div>
+            <span id="rollText"></span>
+          </div>
+          <div>
+            <button id="diceRollButton" type="button">Roll!</button>
+          </div>
+
+
+
+        </div>
+
+
 
         <!--STORY RELATED CONTENT-->
         <div class="hidden-story">

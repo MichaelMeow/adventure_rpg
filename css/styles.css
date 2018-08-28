@@ -1,5 +1,7 @@
 body {
-  background-color: grey;
+  background-color: black;
+  font-family: "Courier New", Courier, monospace;
+  color: green;
 }
 
 .container-fluid {
@@ -31,4 +33,43 @@ body {
 
 .startButton {
   display: none;
+}
+
+.splash{
+  text-align: center
+
+}
+
+pre {
+  background: black;
+  color: green;
+  border:2px solid Black;
+  padding-right: 80px;
+}
+
+#goblinQuest{
+  font-size: 1.5em;
+  line-height: .98em;
+  padding:-1px
+}
+
+#borf{
+  font-size: .5em;
+  line-height: .98em;
+  padding:-1px
+}
+
+#playNow{
+
+  font-size: 16px;
+  padding: 15px 32px;
+}
+
+button {
+  background-color: black; /* Green */
+
+    border: 1px solid green;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
 }

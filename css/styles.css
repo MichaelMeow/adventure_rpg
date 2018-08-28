@@ -1,15 +1,27 @@
+*{
+  border: dashed 2px grey;
+}
+
 body {
   color: green;
   background-color: black;
   font-family: 'VT323', monospace;
+}
 
+::-webkit-scrollbar {
+    width: 10px;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: green;
+border-radius: 10px;
 }
 
 .container-fluid {
   padding-top: 3%;
   padding-left: 7%;
   padding-right: 7%;
-  border: dashed yellow;
   font-size: 2em;
 }
 
@@ -18,18 +30,15 @@ body {
 }
 
 .row {
-  border: dashed orange 2px;
   background-color: ;
 }
 
 .col-md-auto {
-  border: dashed yellow 2px;
   font-size: 40px;
   min-width: 400px;
 }
 
 .col {
-  border: dashed yellow 2px;
   font-size: 40px;
   overflow:auto;
   height: 700px;
@@ -90,19 +99,28 @@ pre {
   overflow: hidden;
 }
 
-#playNow{
-
-  font-size: 16px;
+#playNow {
+  font-size: 20px;
   padding: 15px 32px;
+  border: 2px solid green;
 }
 
 button {
   background-color: black;
-    border: 1px solid green;
-    border-radius: 5px;
-    text-align: center;
-    display: inline-block;
-    color: green;
+  border: 3px solid green;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  color: green;
+  font-size: 30px;
+  padding: 10px 30px;
+}
+
+button:focus {
+  outline:0;
+  color: black;
+  background-color: green;
 }
 
 .copyright {

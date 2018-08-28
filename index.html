@@ -2,13 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
+
   <title>Adventure RPG</title>
 
 </head>
@@ -16,10 +18,10 @@
 
   <div class="container-fluid">
     <!--MASTER ROW-->
-    <div class="row">
+    <div class="row justify-content-xl-center">
 
       <!--STAT BAR COLUMN-->
-      <div class="col-md-3">
+      <div class="col-md-auto">
 
         <p>Name: <span id="characterName"></span></p>
         <p>Strength: <span id="strengthStat"></span></p>
@@ -29,8 +31,7 @@
 
       </div>
 
-
-      <div class="col-md-9">
+      <div class="col">
 
 <!--CHARACTER CREATION-->
         <div id="createName">
@@ -70,21 +71,21 @@
           <div id="1">
             <!-- Choose a companion -->
             <p class="hidden">Our hero finds themselves in a pub, chatting with a couple of strangers. The stranger on the left is a menacing drunk that seems very tough. The stranger on the right is a scholarly looking gent that has a witty tongue. You need a companion to continue your journey and find both of these characters worthy. Should you pick the drunk or the scholar?</p>
-            <button type="button" class="a buttony" name="drunk">Drunk</button> <!-- go to page-two-a -->
-            <button type="button" class="b buttony" name="scholar">Scholar</button> <!-- go to page-two-a -->
+            <button type="button" class="a" name="drunk">Drunk</button> <!-- go to page-two-a -->
+            <button type="button" class="b" name="scholar">Scholar</button> <!-- go to page-two-a -->
 
           </div>
           <div id="2">
             <!-- Puzzle/Riddle -->
             <p class="hidden">After a few more pints, the drunk is finally ready to go. You leave the pub behind with the drunk by your side and embark on your adventure. On the edge of town, you encounter an old hag. She asks you to solve a riddle. Which answer do you choose?</p>
-            <button type="button" class="a buttony" name="cowboy">cowboy</button> <!-- go to page-three-a -->
-            <button type="button" class="b buttony" name="dracula">dracula</button> <!-- go to page-three-b -->
+            <button type="button" class="a" name="cowboy">cowboy</button> <!-- go to page-three-a -->
+            <button type="button" class="b" name="dracula">dracula</button> <!-- go to page-three-b -->
           </div>
           <div id="3">
             <!-- Puzzle/Riddle -->
-            <p>You leave the pub behind with the scholar by your side and embark on your adventure. On the way out of town you encounter an old hermit. He asks you to solve a riddle. Which answer do you choose?</p>
-            <button type="button" class="a" name=""></button> <!-- go to page-two-a -->
-            <button type="button" class="b" name=""></button> <!-- go to page-two-a -->
+            <p class="hidden">You leave the pub behind with the scholar by your side and embark on your adventure. On the way out of town you encounter an old hermit. He asks you to solve a riddle. Which answer do you choose?</p>
+            <button type="button" class="a" name="tester">tester</button> <!-- go to page-two-a -->
+            <button type="button" class="b" name="still test">still test</button> <!-- go to page-two-a -->
           </div>
 
           <div id="4">
@@ -129,12 +130,6 @@
 
     </div>
   </div>
-
-  <div class="textDelay">
-    <p>Example text here: </p>
-    <span id="practiceText"> testing pne</span>
-  </div>
-
 
 
 

@@ -1,20 +1,31 @@
 body {
-  background-color: grey;
+  color: green;
+  background-color: black;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+
 }
 
 .container-fluid {
-  margin-top: 20%;
+  padding-top: 20%;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .row {
   border: solid black 2px;
+  background-color: ;
 }
 
-.col-md-3 {
+.col-md-auto {
   border: solid black 2px;
+  font-size: 40px;
 }
-.col-md-9 {
-  background-color: yellow;
+
+input{
+  background: black;
+  color: green;
+  border: none;
 }
 
 .hidden-story {
@@ -32,3 +43,21 @@ body {
 .startButton {
   display: none;
 }
+
+/*
+.col-sm-2 {
+  font-size: 18px;
+  width: 200px;
+}
+
+.col-sm-10 {
+  width:340px;
+}
+
+.col-md-2 {
+  width:300px;
+}
+
+.col-md-10 {
+  width:420px;
+} */

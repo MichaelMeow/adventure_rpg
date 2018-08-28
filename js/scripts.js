@@ -1,5 +1,15 @@
 // BACKEND
-newCharacter = [];
+var showText = function (target, message, index) {
+  if (index < message.length) {
+    $(target).append(message[index++]);
+    setTimeout(function () { showText(target, message, index); }, 15);
+  } else {
+
+    $(".current-story").show();
+    $(".hidden").hide();
+  }
+}
+
 
 // CHARACTER CONSTRUCTOR
 function Character (name) {
@@ -65,7 +75,13 @@ var storyArray = [[2,3],[4,5],[5,6],[7,5],[9,10],[5,8],[0,0],[0,0]]
     });
 
     $("#start").click(function(){
-      $(".current-story").append($("#1"))
+      $(".current-story").append($("#1"));
+      $(".current-story").hide();
+
+      // console.log($(".hidden").html())
+      // showButton ($(".hidden").html(), $(".current-story"))
+
+      showText($(".printText"), $("#1 .hidden").html(), 0);
       $(".startButton").hide();
       $("#createStats").hide();
     })
@@ -73,10 +89,13 @@ var storyArray = [[2,3],[4,5],[5,6],[7,5],[9,10],[5,8],[0,0],[0,0]]
     var currentPage = 1
 
     $(".a").click(function(){
+      $(".current-story").hide();
       $(".hidden-story").append($("#" + currentPage))
       var aPage = storyArray[currentPage-1][0]
       $(".current-story").append($("#" + aPage))
       currentPage = aPage
+      $(".printText").empty();
+      showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
     })
     $(".b").click(function(){
       $(".hidden-story").append($("#" + currentPage))

@@ -46,6 +46,15 @@ var showText = function (target, message, index) {
 
 $(document).ready(function(){
 var storyArray = [[2,3],[4,5],[5,6],[7,5],[9,10],[5,8],[0,0],[0,0]]
+
+$(".container-fluid").hide();
+$("button#playNow").click(function(){
+$(".splash").hide();
+$(".container-fluid").show();
+})
+
+
+
 // WHEN THE NAME BUTTON IS CLICKED:
   $("button#nameButton").click(function(){
     $("#createName").hide();

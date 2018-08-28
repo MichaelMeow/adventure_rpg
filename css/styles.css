@@ -2,19 +2,23 @@ body {
   color: green;
   background-color: black;
   font-family: 'VT323', monospace;
-  font-size: 30px;
 
 }
 
 .container-fluid {
-  padding-top: 20%;
+  padding-top: 3%;
   padding-left: 7%;
   padding-right: 7%;
   border: dashed yellow;
+  font-size: 2em;
+}
+
+.printText {
+  overflow:auto;
 }
 
 .row {
-  border: solid black 2px;
+  border: dashed orange 2px;
   background-color: ;
 }
 
@@ -27,6 +31,9 @@ body {
 .col {
   border: dashed yellow 2px;
   font-size: 40px;
+  overflow:auto;
+  height: 700px;
+  margin-bottom: 3%;
 }
 
 input{
@@ -51,20 +58,54 @@ input{
   display: none;
 }
 
-/*
-.col-sm-2 {
-  font-size: 18px;
-  width: 200px;
+.splash{
+  text-align: center
+
 }
 
-.col-sm-10 {
-  width:340px;
+pre {
+  background: black;
+  color: green;
+  border:2px solid Black;
+  padding-right: 80px;
 }
 
-.col-md-2 {
-  width:300px;
+
+#borfCastle {
+  font-size: 13px;
+  margin-left: 30%;
 }
 
-.col-md-10 {
-  width:420px;
-} */
+#goblinQuest{
+  font-size: 1.5em;
+  line-height: .98em;
+  padding:-1px;
+  overflow: hidden;
+}
+
+#borf{
+  font-size: .5em;
+  line-height: .98em;
+  padding:-1px;
+  overflow: hidden;
+}
+
+#playNow{
+
+  font-size: 16px;
+  padding: 15px 32px;
+}
+
+button {
+  background-color: black;
+    border: 1px solid green;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    color: green;
+}
+
+.copyright {
+  text-align: right;
+  padding-right: 20px;
+}

@@ -1,5 +1,4 @@
 // BACKEND
-newCharacter = [];
 
 // CHARACTER CONSTRUCTOR
 function Character (name) {
@@ -16,8 +15,35 @@ var dice = function() {
   return roll;
 };
 
+var showText = function (target, message, index) {
+  if (index < message.length) {
+    $(target).append(message[index++]);
+    setTimeout(function () { showText(target, message, index); }, 5);
+  } else {
+    $(".current-story").show();
+    $(".hidden").hide();
+  }
+
+}
+
+
+
+
 
 // FRONTEND
+
+//WORKING SOLUTION: SEPARATE LISTNER INTO FRONT END? DON'T DELETE
+// var displayListener = function(showButtonTrigger) {
+//   if (showButtonTrigger === 0) {
+//     $(".current-story").show();
+//     $(".hidden").hide();
+//     console.log("ShowbuttonTriggerAfter" + showButtonTrigger);
+//   } else {
+//     setTimeout(function () { displayListener(showButtonTrigger); }, 1000);
+//     console.log("ShowbuttonTriggerBefore" + showButtonTrigger);
+//   }
+// }
+
 $(document).ready(function(){
 var storyArray = [[2,3],[4,5],[5,6],[7,5],[9,10],[5,8],[0,0],[0,0]]
 
@@ -74,7 +100,10 @@ $(".container-fluid").show();
     });
 
     $("#start").click(function(){
-      $(".current-story").append($("#1"))
+      $(".current-story").append($("#1"));
+      $(".current-story").hide();
+
+      var timer = showText($(".printText"), $("#1 .hidden").html(), 0);
       $(".startButton").hide();
       $("#createStats").hide();
     })
@@ -82,16 +111,25 @@ $(".container-fluid").show();
     var currentPage = 1
 
     $(".a").click(function(){
+      $(".current-story").hide();
       $(".hidden-story").append($("#" + currentPage))
       var aPage = storyArray[currentPage-1][0]
       $(".current-story").append($("#" + aPage))
       currentPage = aPage
+      console.log(currentPage)
+      $(".printText").empty();
+      showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
     })
+
     $(".b").click(function(){
+      $(".current-story").hide();
       $(".hidden-story").append($("#" + currentPage))
       var bPage = storyArray[currentPage-1][1]
       $(".current-story").append($("#" + bPage))
       currentPage = bPage
+      console.log(currentPage)
+      $(".printText").empty();
+      showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
     })
 
   });

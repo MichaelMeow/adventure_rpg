@@ -1,22 +1,31 @@
 body {
-  background-color: black;
-  font-family: "Courier New", Courier, monospace;
   color: green;
+  background-color: black;
+  font-family: 'VT323', monospace;
+
 }
 
 .container-fluid {
-  margin-top: 20%;
+  padding-top: 20%;
+  padding-left: 7%;
+  padding-right: 7%;
+  font-size: 2em;
 }
 
 .row {
   border: solid black 2px;
+  background-color: ;
 }
 
-.col-md-3 {
+.col-md-auto {
   border: solid black 2px;
+  font-size: 40px;
 }
-.col-md-9 {
-  background-color: yellow;
+
+input{
+  background: black;
+  color: green;
+  border: none;
 }
 
 .hidden-story {
@@ -71,6 +80,7 @@ button {
     border-radius: 5px;
     text-align: center;
     display: inline-block;
+    color: green;
 }
 
 .copyright {

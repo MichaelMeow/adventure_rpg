@@ -155,7 +155,6 @@
             <p class="hidden">After a few more pints and shouting conversation the drunkard is finally ready to go. He picks up his giant frame and drags it away from the bar. You leave the pub with the drunkard by your side and embark on your adventure. He tells you once again that he will kill Borf and steal his treasure. He continues on at length about his plans to then buy a horse, to maybe buy a compass and to somehow attract a suitable partner. His motivations are simple and despite his intimidating demeanor he seems very good natured. He stops briefly beside the path to make sick in a bush.
 
             As you approach the edge of town, you encounter an old hag. She prolly has had a very rough life, or she's like 200 years old. It seems she is blocking the path, but not with her sack of bones. With no provocation she says: "Good evening travelers. My name is Vurda. If you cannot solve my riddle something bad will happen." She recites the riddle with boredom. It seems this is not her first riddle rodeo.
-
             "Lovely and round,
             I shine with pale light,
             grown in the darkness,
@@ -721,6 +720,155 @@
             </div>
           </div>
           <div class="borf">
+            <div class="borf story">
+              <div class="drunkard-borf-branch"
+              <div id="page-1">
+                <p>From here the disgusting rumbling of The Goblin King Borf's belly can be heard. Bootstrap seems like he could use something to eat as well. You progress through the castle corridors towards Borf's lair. It seems eerily quiet. The throne room door is ajar... should you enter the throne room or just go back to the pub?</p>
+                <button type="button" id="choice-one" name="enter">Enter</button> <!-- go to page-2-yes -->
+                <button type="button" id="choice-two" name="back">Go Back</button> <!-- go to page-two-no -->
+              </div>
+              <div id="page-2-back">
+                <p>You are paralyzed with fear and decide to go back to the pub and just hope for the best. Unless you overcome your fear now and face Borf this is the end of your quest and your designation as a hero.
+                  Do you go back to the pub or continue the quest?</p>
+                  <button type="button" id="choice-one" name="pub">Pub</button> <!-- go to page-3-d -->
+                  <button type="button" id="choice-two" name="quest">Continue</button> <!-- go to page-two-a -->
+                </div>
+                <div id="drunk-hero-ending">
+                  <p>Drunk Hero's Ending (Scholar branch)
+                    You have decided to waste all of this time and just give up. Congrats or something?</p>
+                    <button type="button" id="choice-one" name="replay">Replay</button> <!-- go to splash page -->
+                  </div>
+                  <div id="page-2-enter">
+                    <p>You quietly approach the door to Borf's lair. It smells like burnt toast and soured ranch dressing. As you push the door open the hinge creaks, announcing your arrival. Borf sits upon his throne, glaring at you and Bootstrap. You feel like you've been waiting your whole life for this one moment. With the lights low and the curtains open you fear you may be on the verge of just blowing it. <br>
+                      You look around the room and notice your dead lover Jaime on a ritual table. Enraged, you find the strength to push forward. Borf declares he will resurrect Jaime and unleash unknown horrors upon the earth. There is literally a bucket of ranch dressing and a pile of toast nearby on the floor. Should you feed Bootstrap a snack now?</p>
+                      <button type="button" id="choice-one" name="snack-yes">Yeah</button> <!-- go to page-three-y -->
+                      <button type="button" id="choice-two" name="snack-no">No!</button> <!-- go to page-three-n -->
+                    </div>
+                    <div id="page-3-yes">
+                      <p>While Bootstrap holds Borf's gaze you snatch up a piece of toast and dip it deeply into the ranch dressing. You hand the snack to your companion. Not because you are about to fight Borf but because Bootstrap Buckles is a drunkard he consumes the thing in one bite, smearing ranch dressing from his lips with his forearm. He is ready now.
+                        <!--Bootstrap gains toast/ranch stat boost--></p>
+                        <button type="button" id="choice-one" name="continue-to-page-4">Continue</button> <!-- go to page-4 -->
+                      </div>
+                      <div id="page-3-no">
+                        <p>You are in too much of a pickle to help Bootstrap snack right now. He can fight with an empty belly.</p>
+                        <button type="button" id="choice-one" name="continue-to-page-4">Continue</button> <!-- go to page-4 -->
+
+                      </div>
+                      <div id="page-4">
+                        <p>Borf gets up from the throne and points his staff your direction. His eyes turn red with fury. He yells "Now you die!!!" You and Bootstrap sense there is danger incoming and step aside just as a fireball soars past. Bootstrap seems braced to attack, awaiting your next move. Do you launch the bucket of ranch dressing at Borf or lead the charge and attack?</p>
+                        <button type="button" id="choice-one" name="ranch">Ranch</button> <!-- go to page-5a -->
+                        <button type="button" id="choice-two" name="attack">Attack</button> <!-- go to page-5-b -->
+                      </div>
+                      <div id="page-5-a">
+                        <p>In one swift movement you swipe up the ranch dressing and hurl it at Borf's head. The Goblin King is amused with your decision and hits it back your way with his staff. You have been covered with cool ranch dressing. Bootstrap attacks the sidetracked Borf and lands a direct hit. <!--stat check to determine if Borf is dead--></p>
+                        <button type="button" id="choice-one" name="continue-to-6">Continue</button> <!-- go to page-6-a -->
+                      </div>
+                      <div id="page-5-b">
+                        <p>You do not have time for a food fight. This is serious business here. You lead the attack with the loyal Bootstrap by your side. <!--stat check to determine if Borf is dead from Bootstrap and heros stats--></p>
+                        <button type="button" id="choice-one" name="continue-to-6">Continue</button> <!-- go to page-6 -->
+                      </div>
+                      <div id="page-6">
+                        <p>Borf withstands the attack though his flaming eyes of fury have been cooled. His staff cannot be used magically yet but he can and does hit you in the face with it. <!--Agility roll to determine if the hero gets hit with staff if hit: Strength and Intelligence roll to withstand it(reduce Strength and Intelligence stat if fail)--></p>
+                        <button type="button" id="choice-one" name="continue-to-7">Continue</button> <!-- go to page-7 -->
+                      </div>
+                      <div id="page-7">
+                        <p>You survive the attack and have no choice now but to attack Borf again. With no small amount of emotion you scream "Let's buckle this thing, Bootstrap!!!" <!--stat check to determine if Borf is dead from Bootstrap and heros stats
+                          -repeat 6a and 7a until resolution--></p>
+                          <button type="button" id="choice-one" name="kill-borf">Kill Borf!</button> <!-- go to page-8 -->
+                        </div>
+                        <div id="page-8">
+                          <p>You have defeated the terrible Goblin King Borf. His gross behavior can no longer unleash terror upon the earth. His foul plan to resurrect Jaime and open the doors to the underworld will die with him. He manages to utter one last menacing threat: "You haven't seen the last of me..." and then hands you a glamor shot of his likeness and expires. <br>
+                            Bootstrap Buckles gathers enough treasure to live comfortably for a while. His dream of owning a horse and finding a partner seem within close reach. In another life, another time, he could be a cowboy. <br>
+                            Tear in eye you take one last look at Jaime Jquiria. They would have made a lovely undead Goblin Royalty. They made a wonderful normal-alive-human-true-love partner. Alas, that ship has sailed. <br>
+                            You gather a small fortune in treasure and light the castle on fire as you leave. Tossing Borf's glamor shot in the fire you laugh out loud. The hero's journey has many branches and you have walked the path to victory. Fortune smiles upon thee. <3</p>
+                            <button type="button" id="choice-one" name="replay">Play Again!</button> <!-- go to page splash page -->
+                          </div>
+                        </div>
+                        <div class="scholar-borf-branch">
+                          <div id="page-1">
+                            <p>From here the disgusting rumbling of The Goblin King Borf's belly can be heard. Artemisia seems like he knows the way. You wonder how he knows so much. He really has studied some very esoteric knowledge. You progress through the castle corridors towards Borf's lair. It seems eerily quiet. The throne room door is ajar... should you enter the throne room or just leave?</p>
+                            <button type="button" id="choice-one" name="enter">Enter</button> <!-- go to page-two-a -->
+                            <button type="button" id="choice-two" name="leave">Leave</button> <!-- go to page-two-b -->
+                          </div>
+                          <div id="page-2b">
+                            <p>You are paralyzed with fear and decide to go back to the pub and just hope for the best. Unless you overcome your fear now and face Borf this is the end of your quest and your designation as a hero.
+                              Do you go back to the pub or continue the quest?</p>
+                              <button type="button" id="choice-one" name="quest">Continue</button> <!-- go to page-two-a -->
+                              <button type="button" id="choice-two" name="pub">Pub</button> <!-- go to page-drunk-hero-ending -->
+                            </div>
+                            <div id="drunk-hero-ending">
+                              <p>Drunk Hero's Ending (Scholar branch)
+                                You have decided to waste all of this time and just give up. Congrats or something?</p>
+                                <button type="button" id="choice-one" name="replay">Replay</button> <!-- go to splash page -->
+                              </div>
+                              <div id="page-2-a">
+                                <p>You quietly approach the door to Borf's lair. It smells like burnt toast and soured ranch dressing. As you push the door open the hinge creaks, announcing your arrival. Borf sits upon his throne, glaring at you and Artemisia. You feel like you've been waiting your whole life for this one moment. With the lights low and the curtains open you fear you may be on the verge of just blowing it. <br>
+                                  You look around the room and notice your dead lover Jaime on a ritual table. Enraged, you find the strength to push forward. Borf declares he will resurrect Jaime and unleash unknown horrors upon the earth. There is literally a bucket of ranch dressing and a pile of toast nearby on the floor.  <br>
+                                  Borf gets up from the throne and points his staff your direction. His eyes turn red with fury. He yells "Now you die!!!" You and Artemisia sense there is danger incoming and step aside just as a fireball soars past. Artemisia says "Now is our chance!" and awaits your next move. Do you launch the bucket of ranch dressing at Borf or lead the charge and attack?</p>
+                                  <button type="button" id="choice-one" name="launch">Ranch</button> <!-- go to page-two-a -->
+                                  <button type="button" id="choice-two" name="attack">Attack</button> <!-- go to page-two-a -->
+                                </div>
+                                <div id="page-3-a">
+                                  <p>In one swift movement you swipe up the ranch dressing and hurl it at Borf's head. The Goblin King is amused with your decision and hits it back your way with his staff. You have been covered with cool ranch dressing. Artemisia attacks the sidetracked Borf and lands a direct hit. <!--stat check to determine if Borf is dead--></p>
+                                  <button type="button" id="choice-one" name="continue">Continue</button> <!-- go to page-4 -->
+                                </div>
+                                <div id="page-3-b">
+                                  <p>You do not have time for a food fight. This is serious business here. You lead the attack with Artemisia by your side. <!--stat check to determine if Borf is dead from Artemisia and heros stats--></p>
+                                  <button type="button" id="choice-one" name="attack">Attack</button> <!-- go to page-4 -->
+                                </div>
+                                <div id="page-4">
+                                  <p>Borf withstands the attack though his flaming eyes of fury have cooled. Artemisia whispers "He will not be able to cast a fireball until his eyes are red again." He can however hit you in the face with it directly. Borf swings his magic staff at your head. <!--Agility roll to determine if the hero gets hit with staff -if hit: Strength and Intelligence roll to withstand it(reduce strength and intelligence stat if fail)
+                                  --></p>
+                                  <button type="button" id="choice-one" name="dodge">Dodge?</button> <!-- go to page-5a or 5b -->
+                                </div>
+                                <div id="page-5-a">
+                                  <p>You withstand the attack and are confused. Artemisia is again waiting for you to attack. It seems like he is afraid or something. Do you lead the attack or tell Artemisia to "Do something!"?</p>
+                                  <button type="button" id="choice-one" name="lead">Attack</button> <!-- go to page-6-a -->
+                                  <button type="button" id="choice-two" name="artemisia">Artemisia!</button> <!-- go to page-6-b -->
+                                </div>
+                                <div id="page-5-b">
+                                  <p>You gracefully dodge the staff attack from Borf. Do you lead the attack or tell Artemisia to "Do something!"?</p>
+                                  <button type="button" id="choice-one" name="lead">Attack</button> <!-- go to page-6-a -->
+                                  <button type="button" id="choice-two" name="artemisia">Artemisia!</button> <!-- go to page-6-b -->
+                                </div>
+                              </div>
+                              <div id="page-6-a">
+                                <p>You lead the attack with Artemisia! <!--dice roll to determine if Borf is dead.--></p>
+                                <button type="button" id="choice-one" name="attack">Attack</button> <!-- go to page-7 -->
+                              </div>
+                              <div id="page-6-b">
+                                <p>You turn to your companion, Artemisia, and yell "DO SOMETHING!!" Artemisia attacks first! <!--dice roll to determine if Borf is dead--></p>
+                                <button type="button" id="choice-one" name="attack">Attack</button> <!-- go to page-7 -->
+                              </div>
+                              <div id="page-7">
+                                <p>The Goblin King survives the attack and has rekindled his flaming eyes of fury. He points his staff your direction and casts a fireball at your head. You could see this one coming from, like 10 feet away. You hit the deck as the fireball sours over.<!--dice roll to dodge--></p>
+                                <button type="button" id="choice-one" name="dodge">Dodge</button> <!-- go to page-8 -->
+                              </div>
+                              <div id="page-8">
+                                <p>Artemisia leads the return attack with you following close behind. -dice roll to determine if Borf is dead</p>
+                                <button type="button" id="choice-one" name="attack">Attack</button> <!-- go to page-9 -->
+                              </div>
+                              <div id="page-9">
+                                <p>You have defeated the terrible Goblin King Borf. His gross behavior can no longer unleash terror upon the earth. He manages to utter one last menacing threat: "You haven't seen the last of me..." and then hands you a glamor shot of his likeness and expires. His foul plan to resurrect Jaime and open the doors to the underworld will die with him... so it would seem. <br>
+                                  Artemisia snatches up the magic staff. He turns to you and with a wry smile says "Hey, buddy. Thanks for helping me acquire the magic staff. I'm going to kill you and resurrect Jaime myself. With your undead lost lover by my side I will complete the ritual to open the doors to the underworld and unleash unknown horrors upon the earth. I'm not a goblin but I promise you I can be an excellent Goblin King!!! Now you die!" <br>
+                                  Artemisia attempts to cast a fireball but instead the magic staff lobs a glob of ranch dressing at you. That's where that stuff comes from!? You have been covered in cool ranch dressing. Attack Artemisia or fling ranch dressing at them?</p>
+                                  <button type="button" id="choice-one" name="ranch">Ranch</button> <!-- go to page-10b -->
+                                  <button type="button" id="choice-two" name="attack">Attack</button> <!-- go to page-11 -->
+                                </div>
+                                <div id="page-10">
+                                  <p>You scoop a handful of cool ranch dressing from your face and hurl it at your worthy adversary. Artemisia is hit in the face with cool ranch dressing and is confused. <!--go to -page-11--></p>
+                                  <button type="button" id="choice-one" name="attack">Attack</button> <!-- go to page-11 -->
+                                </div>
+                                <div id="page-11">
+                                  <p>You attack and kill Artemisia with ease! You are truly the stuff heroes are made of. <br>
+                                    Tear in eye you take one last look at Jaime Jquiria. They would have made a lovely undead Goblin Royalty. They made a wonderful normal alive-human-true-love partner. Alas, that ship has sailed.<br>
+                                    You gather a small fortune in treasure and light the castle on fire as you leave. Tossing Borf's glamor shot in the fire you laugh out loud. The hero's journey has many branches and you have walked the path to victory. Fortune smiles upon thee. <3</p> <br>
+                                    <button type="button" id="choice-one" name="replay">Play Again</button> <!-- go to splash page -->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
           </div>
         </div>
       </div>

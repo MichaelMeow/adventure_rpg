@@ -1,25 +1,16 @@
+/* *{
+  border: dashed 2px grey;
+} */
+
 body {
   color: green;
   background-color: black;
   font-family: 'VT323', monospace;
-
 }
 
-.container-fluid {
-  padding-top: 20%;
-  padding-left: 7%;
-  padding-right: 7%;
-  font-size: 2em;
-}
-
-.row {
-  border: solid black 2px;
-  background-color: ;
-}
-
-.col-md-auto {
-  border: solid black 2px;
-  font-size: 40px;
+pre {
+  background: black;
+  color: green;
 }
 
 input{
@@ -28,8 +19,129 @@ input{
   border: none;
 }
 
+button.a, button.b, button.stat {
+  display: inline-block;
+}
+
+button {
+  background-color: black;
+  border: 3px solid green;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: green;
+  font-size: 30px;
+  padding: 10px 30px;
+}
+
+button:focus {
+  outline:0;
+}
+
+button:hover {
+  outline:0;
+  color: black;
+  background-color: green;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  padding-top: 3%;
+  padding-left: 7%;
+  padding-right: 7%;
+  font-size: 2em;
+}
+
+.col {
+  font-size: 40px;
+  overflow:auto;
+  height: 700px;
+  margin-bottom: 3%;
+}
+
+.col-md-auto {
+  font-size: 40px;
+  width: 400px;
+}
+
+.picture {
+  margin: 0 auto;
+  width: 940px;
+}
+
+.characterStatsDisplay {
+  line-height: 1em;
+  word-wrap: break-word;
+}
+
+.printText {
+  overflow:auto;
+}
+
+.splash {
+  text-align: center
+}
+
+.copyright {
+  text-align: right;
+  padding-right: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 10px;
+}
+
 .hidden-story {
   display: none;
+}
+
+.startButton {
+  display: none;
+}
+
+.characterBar {
+  display: none;
+}
+
+#goblinQuest{
+  font-size: 1.5em;
+  line-height: .98em;
+  padding:-1px;
+  overflow: hidden;
+}
+
+#borf{
+  font-size: .5em;
+  line-height: .98em;
+  padding:-1px;
+  overflow: hidden;
+}
+
+#playNow {
+  font-size: 20px;
+  padding: 15px 32px;
+  border: 2px solid green;
+  margin: 0 auto;
+}
+
+#borfCastle {
+  font-size: 13px;
+}
+
+#characterPortrait {
+  font-size: .25em;
+  margin-bottom: .5%;
+}
+
+#characterName {
+  font-family: 'VT323', monospace;
 }
 
 #createStats {
@@ -40,50 +152,86 @@ input{
   display: none;
 }
 
-.startButton {
-  display: none;
-}
+@media screen and (min-width:720px) and (max-width: 1280px) {
 
-.splash{
-  text-align: center
+  body {
+    background-color: grey;
+  }
 
-}
+  pre {
+    border:2px solid Black;
+    padding-right: 80px;
+  }
 
-pre {
-  background: black;
-  color: green;
-  border:2px solid Black;
-  padding-right: 80px;
-}
-
-#goblinQuest{
-  font-size: 1.5em;
-  line-height: .98em;
-  padding:-1px
-}
-
-#borf{
-  font-size: .5em;
-  line-height: .98em;
-  padding:-1px
-}
-
-#playNow{
-
-  font-size: 16px;
-  padding: 15px 32px;
-}
-
-button {
-  background-color: black;
-    border: 1px solid green;
+  button {
+    border: 3px solid green;
     border-radius: 5px;
-    text-align: center;
-    display: inline-block;
-    color: green;
-}
+    margin: 0 auto;
+    font-size: 15px;
+    padding: 10px 30px;
+  }
 
-.copyright {
-  text-align: right;
-  padding-right: 20px;
+  .container-fluid {
+    padding-top: 3%;
+    padding-left: 7%;
+    padding-right: 7%;
+    font-size: .5em;
+  }
+
+  .col {
+    font-size: 15px;
+    height: 700px;
+    margin-bottom: 3%;
+  }
+
+  .col-md-auto {
+    font-size: 40px;
+    width: 400px;
+  }
+
+  .characterStatsDisplay {
+    line-height: 1em;
+  }
+
+  .copyright {
+    padding-right: 20px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+
+  #goblinQuest{
+    font-size: 1.5em;
+    line-height: .98em;
+    padding:-1px;
+  }
+
+  #borf{
+    font-size: .5em;
+    line-height: .98em;
+    padding:-1px;
+  }
+
+  #playNow {
+    font-size: 20px;
+    padding: 15px 32px;
+    border: 2px solid green;
+  }
+
+  #borfCastle {
+    font-size: 5px;
+    margin-left: 30%;
+  }
+
+  #characterPortrait {
+    font-size: .25em;
+    margin-bottom: .5%;
+  }
+
+
 }

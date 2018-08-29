@@ -167,7 +167,7 @@ button:hover {
     border: 3px solid green;
     border-radius: 5px;
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 15px;
     padding: 10px 30px;
   }
 
@@ -175,11 +175,11 @@ button:hover {
     padding-top: 3%;
     padding-left: 7%;
     padding-right: 7%;
-    font-size: 1em;
+    font-size: .5em;
   }
 
   .col {
-    font-size: 40px;
+    font-size: 15px;
     height: 700px;
     margin-bottom: 3%;
   }
@@ -224,7 +224,7 @@ button:hover {
   }
 
   #borfCastle {
-    font-size: 13px;
+    font-size: 5px;
     margin-left: 30%;
   }
 

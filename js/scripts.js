@@ -97,6 +97,22 @@ var checkedStatName = function(buttonClass, character) {
   }
 };
 
+var lowerStat = function(buttonClass, statValue, character) {
+  if (buttonClass.includes("strength")) {
+    character.strength = (statValue - 5);
+    $("#strengthStat").text(character.strength);
+  } else if (buttonClass.includes("agility")) {
+    character.agility = (statValue - 5);
+    $("#agilityStat").text(character.agility);
+  } else if (buttonClass.includes("charisma")) {
+    character.charisma = (statValue - 5);
+    $("#charismaStat").text(character.charisma);
+  } else {
+    character.intelligence = (statValue - 5);
+    $("#intelligenceStat").text(character.intelligence);
+  }
+};
+
 // WHEN THE NAME BUTTON IS CLICKED:
   $("button#nameButton").click(function(){
     $("#createName").hide();
@@ -201,6 +217,8 @@ var checkedStatName = function(buttonClass, character) {
               if (statCheck(checkedStat, rollRequired, currentRoll) === true) {
               var aPage = storyArray[currentPage-1][0]
             } else {
+              lowerStat(buttonClass, checkedStat, newCharacter);
+              console.log(newCharacter);
                 var aPage = storyArray[currentPage-1][1]
               }
               $(".current-story").append($("#" + aPage))

@@ -11,8 +11,6 @@ body {
 pre {
   background: black;
   color: green;
-  border:2px solid Black;
-  padding-right: 80px;
 }
 
 input{
@@ -48,6 +46,7 @@ button:hover {
 }
 
 .container-fluid {
+  margin: 0 auto;
   padding-top: 3%;
   padding-left: 7%;
   padding-right: 7%;
@@ -64,6 +63,11 @@ button:hover {
 .col-md-auto {
   font-size: 40px;
   width: 400px;
+}
+
+.picture {
+  margin: 0 auto;
+  width: 940px;
 }
 
 .characterStatsDisplay {
@@ -129,7 +133,6 @@ button:hover {
 
 #borfCastle {
   font-size: 13px;
-  margin-left: 30%;
 }
 
 #characterPortrait {
@@ -149,7 +152,11 @@ button:hover {
   display: none;
 }
 
-@media screen and (min-width:300px) and (max-width 1020) {
+@media screen and (min-width:720px) and (max-width: 1280px) {
+
+  body {
+    background-color: grey;
+  }
 
   pre {
     border:2px solid Black;

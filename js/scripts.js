@@ -64,7 +64,7 @@ var statCheck = function (characterStat, statCheckNumber, characterRoll) {
 //   }
 // }
 
-$(document).ready(function(){
+
 var storyArray = [[2,3],[4,9],[8,5],[9,6],[8,7],[0,0],[0,0],
 //FOREST//
 [10],[11],[19,12],[20,13],[15,18,14,18],[17,18,16,18],[49],[49],[21],[21],[0,0],[40],[29],
@@ -78,12 +78,6 @@ var storyArray = [[2,3],[4,9],[8,5],[9,6],[8,7],[0,0],[0,0],
 //BORF//
 [62,60],[61,62],[0,0],[63,64],[65],[65],[66,67],[68],[68],[69],[70,68],[0,0],[0,0],[74,73],[74,61],[75,76],[77],[77],
 [78,79],[80,81],[81],[84,81],[84,82],[83],[84,81],[85,86],[86],[0,0]]
-
-$(".container-fluid").hide();
-$("button#playNow").click(function(){
-$(".splash").hide();
-$(".container-fluid").show();
-})
 
 var checkedCharStat = function(buttonClass, character) {
   if (buttonClass.includes("strength")) {
@@ -125,15 +119,22 @@ var lowerStat = function(buttonClass, statValue, character) {
   }
 };
 
-// WHEN THE NAME BUTTON IS CLICKED:
-$("button#nameButton").click(function(){
-  $("#createName").hide();
-  $("#createStats").show();
-  var characterName = $(".nameInput").val();
-  $("#characterName").text(characterName);
-  var newCharacter = new Character (characterName)
-  $(".characterBar").show();
-  $("#rollText").text("Roll for Strength.")
+$(document).ready(function(){
+  $(".container-fluid").hide();
+  $("button#playNow").click(function(){
+    $(".splash").hide();
+    $(".container-fluid").show();
+  });
+
+  // WHEN THE NAME BUTTON IS CLICKED:
+  $("button#nameButton").click(function(){
+    $("#createName").hide();
+    $("#createStats").show();
+    var characterName = $(".nameInput").val();
+    $("#characterName").text(characterName);
+    var newCharacter = new Character (characterName)
+    $(".characterBar").show();
+    $("#rollText").text("Roll for Strength.")
 
     var i = 0
 // WHEN THE ROLL DICE BUTTON IS CLICKED:
@@ -163,47 +164,50 @@ $("button#nameButton").click(function(){
         $(".startButton").show();
       }
       i ++;
-  });
+    });
 
-  $("#start").click(function(){
-    $(".current-story").append($("#1"));
-    $(".current-story").hide();
+    $("#start").click(function() {
+      $(".current-story").append($("#1"));
+      $(".current-story").hide();
+      var timer = showText($(".printText"), $("#1 .hidden").html(), 0);
+      $(".startButton").hide();
+      $("#createStats").hide();
+    });
 
-  var currentPage = 1
+    var currentPage = 1
 
-  $(".a").click(function(){
-    $(".current-story").hide();
-    $(".hidden-story").append($("#" + currentPage))
-    var aPage = storyArray[currentPage-1][0]
-    $(".current-story").append($("#" + aPage))
-    currentPage = aPage
-    console.log(currentPage)
-    $(".printText").empty();
-    showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
-  })
-  $(".b").click(function(){
-    $(".current-story").hide();
-    $(".hidden-story").append($("#" + currentPage))
-    var bPage = storyArray[currentPage-1][1]
-    $(".current-story").append($("#" + bPage))
-    currentPage = bPage
-    console.log(currentPage)
-    $(".printText").empty();
-    showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
-  })
-  $(".stat").click(function(){
-    $(".printText").empty();
-    var rollRequired = parseInt($(this).val())
-    var buttonClass = $(this).attr("class");
-    var checkedStat = checkedCharStat(buttonClass, newCharacter)
-    var statName = checkedStatName(buttonClass, newCharacter)
-    console.log(checkedStat);
-    showTextStats($(".printText"), 'You need a total of ' + rollRequired + ' ' + statName + ' in order to pass this roll.', 0);
-    $(".current-story").hide(); //still showing because showtext waits and shows current story
-    $(".testButton").hide();
-    $('.testButton').append('<button id="statCheckButton" type="button">Roll!</button>')
-    setTimeout(function () { $(".testButton").show(); }, 750);
-
+    $(".a").click(function(){
+      $(".current-story").hide();
+      $(".hidden-story").append($("#" + currentPage))
+      var aPage = storyArray[currentPage-1][0]
+      $(".current-story").append($("#" + aPage))
+      currentPage = aPage
+      console.log(currentPage)
+      $(".printText").empty();
+      showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
+    })
+    $(".b").click(function(){
+      $(".current-story").hide();
+      $(".hidden-story").append($("#" + currentPage))
+      var bPage = storyArray[currentPage-1][1]
+      $(".current-story").append($("#" + bPage))
+      currentPage = bPage
+      console.log(currentPage)
+      $(".printText").empty();
+      showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
+    })
+    $(".stat").click(function(){
+      $(".printText").empty();
+      var rollRequired = parseInt($(this).val())
+      var buttonClass = $(this).attr("class");
+      var checkedStat = checkedCharStat(buttonClass, newCharacter)
+      var statName = checkedStatName(buttonClass, newCharacter)
+      console.log(checkedStat);
+      showTextStats($(".printText"), 'You need a total of ' + rollRequired + ' ' + statName + ' in order to pass this roll.', 0);
+      $(".current-story").hide(); //still showing because showtext waits and shows current story
+      $(".testButton").hide();
+      $('.testButton').append('<button id="statCheckButton" type="button">Roll!</button>')
+      setTimeout(function () { $(".testButton").show(); }, 750);
       $("#statCheckButton").click(function() {
         var currentRoll = dice();
 

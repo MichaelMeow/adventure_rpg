@@ -24,9 +24,10 @@ var dice = function() {
 };
 
 var showText = function (target, message, index) {
-  if (index < message.length) {
-    $(target).append(message[index++]);
-    setTimeout(function () { showText(target, message, index); }, 5);
+  var newStr = message.replace('&nbsp;',' ');
+  if (index < newStr.length) {
+    $(target).append(newStr[index++]);
+    setTimeout(function () { showText(target, newStr, index); }, 5);
   } else {
     $(".current-story").show();
     $(".hidden").hide();

@@ -47,7 +47,7 @@ button:hover {
 
 .container-fluid {
   margin: 0 auto;
-  padding-top: 3%;
+  padding-top: 1%;
   padding-left: 7%;
   padding-right: 7%;
   font-size: 2em;
@@ -56,20 +56,22 @@ button:hover {
 .col {
   font-size: 40px;
   overflow:auto;
-  height: 700px;
+  height: 825px;
   margin-bottom: 3%;
   margin: auto 0;
+  line-height: 1.2em;
 }
 
 .col-md-auto {
   font-size: 40px;
-  width: 400px;
+  width: 300px;
   margin: auto 0;
+  margin-top: 0;
+  padding-right: 0;
 }
 
 .picture {
   margin: 0 auto;
-  width: 940px;
 }
 
 .characterStatsDisplay {
@@ -135,7 +137,10 @@ button:hover {
 }
 
 #borfCastle {
-  font-size: 13px;
+  font-size: 10px;
+  width: 1200px;
+  overflow: hidden;
+  margin-left: 27%;
 }
 
 #characterPortrait {
@@ -145,6 +150,24 @@ button:hover {
 
 #characterName {
   font-family: 'VT323', monospace;
+}
+
+#innImage {
+  font-size: .43em;
+  margin-left: 40%;
+  width: 800px;
+}
+
+#forest {
+  font-size: .4em;
+  margin-left: 35%;
+  width:900px;
+}
+
+#throneRoom {
+  font-size: .4em;
+  width: 1700px;
+  margin-left: 25%;
 }
 
 #createStats {
@@ -193,7 +216,6 @@ button:hover {
   .col-md-auto {
     font-size: 30px;
     width: 250px;
-    margin-top: 0;
   }
 
   .characterStatsDisplay {

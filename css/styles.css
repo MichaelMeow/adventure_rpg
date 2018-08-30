@@ -58,11 +58,13 @@ button:hover {
   overflow:auto;
   height: 700px;
   margin-bottom: 3%;
+  margin: auto 0;
 }
 
 .col-md-auto {
   font-size: 40px;
   width: 400px;
+  margin: auto 0;
 }
 
 .picture {
@@ -80,7 +82,8 @@ button:hover {
 }
 
 .splash {
-  text-align: center
+  text-align: center;
+  margin: auto 0;
 }
 
 .copyright {
@@ -110,14 +113,14 @@ button:hover {
   display: none;
 }
 
-#goblinQuest{
+#goblinQuest {
   font-size: 1.5em;
   line-height: .98em;
   padding:-1px;
   overflow: hidden;
 }
 
-#borf{
+#riseOfBorf {
   font-size: .5em;
   line-height: .98em;
   padding:-1px;
@@ -138,6 +141,7 @@ button:hover {
 #characterPortrait {
   font-size: .25em;
   margin-bottom: .5%;
+  /* line-height: 1em; */
 }
 
 #characterName {
@@ -152,11 +156,11 @@ button:hover {
   display: none;
 }
 
-@media screen and (min-width:720px) and (max-width: 1280px) {
+@media screen and (min-width:720px) and (max-width: 1441px) {
 
-  body {
-    background-color: grey;
-  }
+  /* body {
+    background-color: white;
+  } */
 
   pre {
     border:2px solid Black;
@@ -164,33 +168,36 @@ button:hover {
   }
 
   button {
-    border: 3px solid green;
+    border: 2px solid green;
     border-radius: 5px;
     margin: 0 auto;
-    font-size: 15px;
-    padding: 10px 30px;
+    font-size: 20px;
+    padding: 10px 20px;
   }
 
+  .row justify-content-xl-center {
+    margin:auto 0;
+  }
   .container-fluid {
-    padding-top: 3%;
-    padding-left: 7%;
-    padding-right: 7%;
-    font-size: .5em;
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
 
   .col {
-    font-size: 15px;
-    height: 700px;
-    margin-bottom: 3%;
+    font-size: 25px;
+    height: 420px;
+    line-height: 30px;
   }
 
   .col-md-auto {
-    font-size: 40px;
-    width: 400px;
+    font-size: 30px;
+    width: 250px;
+    margin-top: 0;
   }
 
   .characterStatsDisplay {
-    line-height: 1em;
+    line-height: .5em;
   }
 
   .copyright {
@@ -206,32 +213,38 @@ button:hover {
   }
 
   #goblinQuest{
-    font-size: 1.5em;
+    font-size: .80em;
     line-height: .98em;
-    padding:-1px;
   }
 
-  #borf{
-    font-size: .5em;
-    line-height: .98em;
-    padding:-1px;
+  #borfPortrait {
+    font-size: 7px;
+  }
+
+  #riseOfBorf {
+    font-size: 7px;
   }
 
   #playNow {
-    font-size: 20px;
-    padding: 15px 32px;
+    font-size: 18px;
+    padding: 10px 20px;
     border: 2px solid green;
   }
 
   #borfCastle {
-    font-size: 5px;
+    font-size: 7px;
     margin-left: 30%;
   }
 
   #characterPortrait {
     font-size: .25em;
     margin-bottom: .5%;
+    margin:auto 0;
+    line-height: 1.25em;
   }
 
+  #characterName {
+    font-size: 40px;
+  }
 
 }

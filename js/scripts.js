@@ -265,7 +265,7 @@ $(document).ready(function() {
     });
     $(".stat").click(function(){
       $(".printText").empty();
-      var rollRequired = (parseInt($(this).val()-10))
+      var rollRequired = (parseInt($(this).val()-5))
       var buttonClass = $(this).attr("class");
       var checkedStat = checkedStatValue(buttonClass, newCharacter)
       var statName = checkedStatName(buttonClass, newCharacter)
@@ -296,7 +296,7 @@ $(document).ready(function() {
             } else {
               currentPage = aPage;
             }
-            $(".current-story").append($("#" + aPage))
+            $(".current-story").append($("#" + currentPage))
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }
@@ -314,7 +314,7 @@ $(document).ready(function() {
             } else {
               currentPage = aPage;
             }
-            $(".current-story").append($("#" + aPage))
+            $(".current-story").append($("#" + currentPage))
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }
@@ -332,7 +332,7 @@ $(document).ready(function() {
             } else {
               currentPage = aPage;
             }
-            $(".current-story").append($("#" + aPage))
+            $(".current-story").append($("#" + currentPage))
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }
@@ -350,7 +350,7 @@ $(document).ready(function() {
             } else {
               currentPage = aPage;
             }
-            $(".current-story").append($("#" + aPage))
+            $(".current-story").append($("#" + currentPage))
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }

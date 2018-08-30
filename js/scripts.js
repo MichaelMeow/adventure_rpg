@@ -9,6 +9,14 @@ function Character (name) {
   this.charisma = 0;
 }
 
+Character.prototype.deathCheck = function () {
+  if (this.strength === 0 || this.agility === 0 || this.intelligence === 0 || this.charisma === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // DICE ROLL FUNCTION THAT GENERATES A NUMBER BETWEEN 1-20
 var dice = function() {
   var roll = Math.floor((Math.random() *20) +1);
@@ -42,14 +50,6 @@ var statCheck = function (characterStat, statCheckNumber, characterRoll) {
   }
 }
 
-// WORKING SOLUTION TO MAKE ASCII ART LOOK BETTER
-// function reverseString(string) {
-//   return string.split("").reverse().join("");
-// }
-//
-
-
-
 // FRONTEND
 
 //WORKING SOLUTION: SEPARATE LISTNER INTO FRONT END? DON'T DELETE
@@ -79,7 +79,7 @@ var storyArray = [[2,3],[4,9],[8,5],[9,6],[8,7],[0,0],[0,0],
 [62,60],[61,62],[0,0],[63,64],[65],[65],[66,67],[68],[68],[69],[70,68],[0,0],[0,0],[74,73],[74,61],[75,76],[77],[77],
 [78,79],[80,81],[81],[84,81],[84,82],[83],[84,81],[85,86],[86],[0,0]]
 
-var checkedCharStat = function(buttonClass, character) {
+var checkedStatValue = function(buttonClass, character) {
   if (buttonClass.includes("strength")) {
     return character.strength;
   } else if (buttonClass.includes("agility")) {
@@ -105,16 +105,56 @@ var checkedStatName = function(buttonClass, character) {
 
 var lowerStat = function(buttonClass, statValue, character) {
   if (buttonClass.includes("strength")) {
-    character.strength = (statValue - 5);
+    if (character.strength > 1 && character.strength < 5) {
+      character.strength = 1;
+    } else if (character.strength === 1) {
+      character.strength = 0;
+    } else {
+      character.strength = (statValue - 4);
+    }
     $("#strengthStat").text(character.strength);
   } else if (buttonClass.includes("agility")) {
-    character.agility = (statValue - 5);
+    if (character.agility > 1 && character.agility < 5) {
+      character.agility = 1;
+    } else if (character.agility === 1) {
+      character.agility = 0;
+    } else {
+      character.agility = (statValue - 4);
+    }
     $("#agilityStat").text(character.agility);
   } else if (buttonClass.includes("charisma")) {
-    character.charisma = (statValue - 5);
+    if (character.charisma > 1 && character.charisma < 5) {
+      character.charisma = 1;
+    } else if (character.charisma === 1) {
+      character.charisma = 0;
+    } else {
+      character.charisma = (statValue - 4);
+    }
     $("#charismaStat").text(character.charisma);
   } else {
-    character.intelligence = (statValue - 5);
+    if (character.intelligence > 1 && character.intelligence < 5) {
+      character.intelligence = 1;
+    } else if (character.intelligence === 1) {
+      character.intelligence = 0;
+    } else {
+      character.intelligence = (statValue - 4);
+    }
+    $("#intelligenceStat").text(character.intelligence);
+  }
+};
+
+var raiseStat = function(buttonClass, statValue, character) {
+  if (buttonClass.includes("strength")) {
+    character.strength = (statValue + 2);
+    $("#strengthStat").text(character.strength);
+  } else if (buttonClass.includes("agility")) {
+    character.agility = (statValue + 2);
+    $("#agilityStat").text(character.agility);
+  } else if (buttonClass.includes("charisma")) {
+    character.charisma = (statValue + 2);
+    $("#charismaStat").text(character.charisma);
+  } else {
+    character.intelligence = (statValue + 2);
     $("#intelligenceStat").text(character.intelligence);
   }
 };
@@ -195,14 +235,16 @@ $(document).ready(function(){
       console.log(currentPage)
       $(".printText").empty();
       showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
-    })
+    });
+    $(".replay").click(function() {
+      location.reload();
+    });
     $(".stat").click(function(){
       $(".printText").empty();
       var rollRequired = parseInt($(this).val())
       var buttonClass = $(this).attr("class");
-      var checkedStat = checkedCharStat(buttonClass, newCharacter)
+      var checkedStat = checkedStatValue(buttonClass, newCharacter)
       var statName = checkedStatName(buttonClass, newCharacter)
-      console.log(checkedStat);
       showTextStats($(".printText"), 'You need a total of ' + rollRequired + ' ' + statName + ' in order to pass this roll.', 0);
       $(".current-story").hide(); //still showing because showtext waits and shows current story
       $(".testButton").hide();
@@ -221,53 +263,74 @@ $(document).ready(function(){
           if (buttonClass.includes("option1")){
             $(".hidden-story").append($("#" + currentPage))
             if (statCheck(checkedStat, rollRequired, currentRoll) === true) {
-            var aPage = storyArray[currentPage-1][0]
-          } else {
+              raiseStat(buttonClass, checkedStat, newCharacter);
+              var aPage = storyArray[currentPage-1][0]
+            } else {
               lowerStat(buttonClass, checkedStat, newCharacter);
-              console.log(newCharacter);
               var aPage = storyArray[currentPage-1][1]
             }
             $(".current-story").append($("#" + aPage))
-            currentPage = aPage
+            if (newCharacter.deathCheck() === true) {
+              currentPage = storyArray[5][0];
+              console.log(newCharacter, newCharacter.deathCheck())
+            } else {
+              console.log(newCharacter, newCharacter.deathCheck())
+              currentPage = aPage;
+            }
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }
           if (buttonClass.includes("option2")){
             $(".hidden-story").append($("#" + currentPage))
             if (statCheck(checkedStat, rollRequired, currentRoll) === true) {
-            var aPage = storyArray[currentPage-1][2]
-          } else {
+              raiseStat(buttonClass, checkedStat, newCharacter);
+              var aPage = storyArray[currentPage-1][2]
+            } else {
               lowerStat(buttonClass, checkedStat, newCharacter);
               var aPage = storyArray[currentPage-1][3]
             }
             $(".current-story").append($("#" + aPage))
-            currentPage = aPage
+            if (newCharacter.deathCheck() === true) {
+              currentPage = storyArray[5][0];
+            } else {
+              currentPage = aPage;
+            }
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }
           if (buttonClass.includes("option3")){
             $(".hidden-story").append($("#" + currentPage))
             if (statCheck(checkedStat, rollRequired, currentRoll) === true) {
-            var aPage = storyArray[currentPage-1][4]
-          } else {
+              raiseStat(buttonClass, checkedStat, newCharacter);
+              var aPage = storyArray[currentPage-1][4]
+            } else {
               lowerStat(buttonClass, checkedStat, newCharacter);
               var aPage = storyArray[currentPage-1][5]
             }
             $(".current-story").append($("#" + aPage))
-            currentPage = aPage
+            if (newCharacter.deathCheck() === true) {
+              currentPage = storyArray[5][0];
+            } else {
+              currentPage = aPage;
+            }
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }
           if (buttonClass.includes("option4")){
             $(".hidden-story").append($("#" + currentPage))
             if (statCheck(checkedStat, rollRequired, currentRoll) === true) {
-            var aPage = storyArray[currentPage-1][6]
-          } else {
+              raiseStat(buttonClass, checkedStat, newCharacter);
+              var aPage = storyArray[currentPage-1][6]
+            } else {
               lowerStat(buttonClass, checkedStat, newCharacter);
               var aPage = storyArray[currentPage-1][7]
             }
             $(".current-story").append($("#" + aPage))
-            currentPage = aPage
+            if (newCharacter.deathCheck() === true) {
+              currentPage = storyArray[5][0];
+            } else {
+              currentPage = aPage;
+            }
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }

@@ -24,10 +24,10 @@ var dice = function() {
 };
 
 var showText = function (target, message, index) {
-  message.replace(/&nbsp;/g,' ');
-  if (index < message.length) {
-    $(target).append(message[index++]);
-    setTimeout(function () { showText(target, message, index); }, 5);
+  var newStr = message.replace('&nbsp;',' ');
+  if (index < newStr.length) {
+    $(target).append(newStr[index++]);
+    setTimeout(function () { showText(target, newStr, index); }, 5);
   } else {
     $(".current-story").show();
     $(".hidden").hide();
@@ -265,7 +265,7 @@ $(document).ready(function() {
     });
     $(".stat").click(function(){
       $(".printText").empty();
-      var rollRequired = parseInt($(this).val())
+      var rollRequired = (parseInt($(this).val()-10))
       var buttonClass = $(this).attr("class");
       var checkedStat = checkedStatValue(buttonClass, newCharacter)
       var statName = checkedStatName(buttonClass, newCharacter)
@@ -276,12 +276,10 @@ $(document).ready(function() {
       setTimeout(function () { $(".testButton").show(); }, 750);
       $("#statCheckButton").click(function() {
         var currentRoll = dice();
-
         $(".testButton").empty();
         $(".printText").append("<br>")
         $('.testButton').append('<button id="statRollButton" type="button">Ok</button>')
         showTextStats($(".printText"), 'Your roll was ' + currentRoll + "." + " Your total " + statName + " is " + (currentRoll + checkedStat) + ".", 0);
-
         $("#statRollButton").click(function() {
           $('.testButton').empty();
           if (buttonClass.includes("option1")){

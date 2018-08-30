@@ -15,7 +15,11 @@
 
 </head>
 <body>
-<iframe src="img/ominous.mp3" allow="autoplay" style="display:none"></iframe>
+<!-- <iframe src="img/ominous.mp3" allow="autoplay" style="display:none"></iframe> -->
+<audio loop autoplay>
+  <source src="img/ominous.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 <div class="splash">
   <pre id="goblinQuest">
 
@@ -89,62 +93,32 @@
     <div class="row picture">
       <div class="col-md-12 ">
         <pre id="borfCastle">
-               _
-              /#\
-             /###\     /\                                                                    ^
-            /  ###\   /##\  /\                                                              / \
-           /      #\ /####\/##\                                                        ^   _|.|_   ^
-          /  /      /   # /  ##\             _       /\                              _|I|  |I .|  |.|_
-        // //  /\  /    _/  /  #\ _         /#\    _/##\    /\                        \II||~~| |~~||  /
-       // /   /  \     /   /    #\ \      _/###\_ /   ##\__/ _\                        ~\~|~~~~~~~|~/~
-      /  \   / .. \   / /   _   { \ \   _/       / //    /    \\                         \|II I ..|/
-/\     /    /\  ...  \_/   / / \   } \ | /  /\  \ /  _    /  /    \ /\              /\    |II.    |    /\
-_ /  \  /// / .\  ..%:.  /... /\ . \ {:  \\   /. \     / \  /   ___   /  \         /  \  _|III .  |_  /  \
-/.\ .\.\// \/... \.::::..... _/..\ ..\:|:. .  / .. \\  /.. \    /...\ /  \ \       |-~| /(|I.I I  |)\ |~-|
-/...\.../..:.\. ..:::::::..:..... . ...\{:... / %... \\/..%. \  /./:..\__   \     _/(I | +-----------+ |. )\_
-.:..\:..:::....:::;;;;;;::::::::.:::::.\}.....::%.:. \ .:::. \/.%:::.:..\    \    \~-----/____-~-____\-----~/
-::::...:::;;:::::;;;;;;;;;;;;;;:::::;;::{:::::::;;;:..  .:;:... ::;;::::..    \    |I.III|  /(===)\  |  .. |
-;;;;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;];;;;;;;;;;::::::;;;;:.::;;;;;;;;:..  \   /~~~-----_________---~~~\
-;;;;;;;;;;;;;;ii;;;;;;;;;;;;;;;;;;;;;;;;[;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;:. \ ##############!!!!!/~~-_%!!!!\
-;;;;;;;;;;;;;;;;;;;iiiiiiii;;;;;;;;;;;;;;};;ii;;iiii;;;;i;;;;;;;;;;;;;;;ii;;;;;:;\ ~)#################!!!!!/~~--\_
-iiii;;;iiiiiiiiiiIIIIIIIIIIIiiiiiIiiiiii{iiIIiiiiiiiiiiiiiiii;;;;;iiiilliiiiiiiii /#####################%%!!!!/ /
-IIIiiIIllllllIIlllIIIIlllIIIlIiiIIIIIIIIIIIIlIIIIIllIIIIIIIIiiiiiiiillIIIllIIII\,~\-_____##############%%%!!!!\/
-IIIiiilIIIIIIIllTIIIIllIIlIlIIITTTTlIlIlIIIlIITTTTTTTIIIIlIIllIlIlllIIIIIIITTT /!!!!\ \ \~-_###########%%%!!!!\
-IIIIilIIIIITTTTTTTIIIIIIIIIIIIITTTTTIIIIIIIIITTTTTTTTTTIIIIIIIIIlIIIIIIIITTTT /#####!!!!!!!\~-_#######%%%!!!!!!\_
-IIIIIIIIITTTTTTTTTTTTTIIIIIIIITTTTTTTTIIIIIITTTTTTTTTTTTTTIIIIIIIIIIIIIITTTTT/#############!!!\#########%%%!!!!!!\
+               _                                                                                                                                                                  _
+              /#\                                                                                                                                                                /#\
+             /###\     /\                                                                           ^                                                                           /###\     /\
+            /  ###\   /##\  /\                                                                     / \                                                                         /  ###\   /##\  /\
+           /      #\ /####\/##\                                                               ^   _|.|_   ^                                                                   /      #\ /####\/##\
+          /  /      /   # /  ##\             _       /\                                     _|I|  |I .|  |.|_                                                                /  /      /   # /  ##\
+        // //  /\  /    _/  /  #\ _         /#\    _/##\    /\                                \II||~~| |~~||  /                           _       /\                        // //  /\  /    _/  /  #\ _
+        // /   /  \     /   /    #\ \      _/###\_ /   ##\__/ _\                               ~\~|~~~~~~~|~/~                           /#\    _/##\    /\                // /   /  \     /   /    #\ \
+        /  \   / .. \   / /   _   { \ \   _/       / //    /    \\                               \|II I ..|/                           _/###\_ /   ##\__/ _\              /  \   / .. \   / /   _   { \ \
+        /\     /    /\  ...  \_/   / / \   } \ | /  /\  \ /  _    /  /    \ /\              /\    |II.    |    /\                    _/       / //    /    \\     /\     /    /\  ...  \_/   / / \   } \ |
+        _ /  \  /// / .\  ..%:.  /... /\ . \ {:  \\   /. \     / \  /   ___   /  \         /  \  _|III .  |_  /  \                  /  /\  \ /  _    /  /    \ /\  _ /  \  /// / .\  ..%:.  /... /\ . \ {:
+        /.\ .\.\// \/... \.::::..... _/..\ ..\:|:. .  / .. \\  /.. \    /...\ /  \ \       |-~| /(|I.I I  |)\ |~-|              \\   /. \     / \  /   ___   /  \/.\ .\.\// \/... \.::::..... _/..\ ..\:|
+        /...\.../..:.\. ..:::::::..:..... . ...\{:... / %... \\/..%. \  /./:..\__   \     _/(I | +-----------+ |. )\_       /\:. .  / .. \\  /.. \    /...\ /  \ \/...\.../..:.\. ..:::::::..:..... . ...\
+        .:..\:..:::....:::;;;;;;::::::::.:::::.\}.....::%.:. \ .:::. \/.%:::.:..\    \    \~-----/____-~-____\-----~/      / {:... / %... \\/..%. \  /./:..\__   \.:..\:..:::....:::;;;;;;::::::::.:::::.\
+        ::::...:::;;:::::;;;;;;;;;;;;;;:::::;;::{:::::::;;;:..  .:;:... ::;;::::..    \    |I.III|  /(===)\  |  .. |      /      }.....::%.:. \ .:::. \/.%:::.:..\::::...:::;;:::::;;;;;;;;;;;;;;:::::;;::
+        ;;;;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;];;;;;;;;;;::::::;;;;:.::;;;;;;;;:..  \   /~~~-----_________---~~~\     /   ;];;;;;;;;;;::::::;;;;:.::;;;;;;;;:..;;;;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        ;;;;;;;;;;;;;;ii;;;;;;;;;;;;;;;;;;;;;;;;[;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;:. \ ##############!!!!!/~~-_%!!!!\/    [;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;ii;;;;;;;;;;;;;;;;;;;;;;;;
+        ;;;;;;;;;;;;;;;;;;;iiiiiiii;;;;;;;;;;;;;;};;ii;;iiii;;;;i;;;;;;;;;;;;;;;ii;;;;;:;\ ~)#################!!!!!/~~--\_   ;};;ii;;iiii;;;;i;;;;;;;;;;;;;;;ii;;;;;;;;;;;;;;;;;;;;;;iiiiiiii;;;;;;;;;;;;;
+        iiii;;;iiiiiiiiiiIIIIIIIIIIIiiiiiIiiiiii{iiIIiiiiiiiiiiiiiiii;;;;;iiiilliiiiiiiii /#####################%%!!!!/     /{iiIIiiiiiiiiiiiiiiii;;;;;iiiilliiiiiiiii;;;iiiiiiiiiiIIIIIIIIIIIiiiiiIiiiiii
+        IIIiiIIllllllIIlllIIIIlllIIIlIiiIIIIIIIIIIIIlIIIIIllIIIIIIIIiiiiiiiillIIIllIIII\,~\-_____##############%%%!!!!\     /IIIIlIIIIIllIIIIIIIIiiiiiiiillIIIllIIIIIiiIIllllllIIlllIIIIlllIIIlIiiIIIIIIII
+        IIIiiilIIIIIIIllTIIIIllIIlIlIIITTTTlIlIlIIIlIITTTTTTTIIIIlIIllIlIlllIIIIIIITTT /!!!!\ \ \~-_###########%%%!!!!\      IIIlIITTTTTTTIIIIlIIllIlIlllIIIIIIITTIIIiiilIIIIIIIllTIIIIllIIlIlIIITTTTlIlIl
+        IIIIilIIIIITTTTTTTIIIIIIIIIIIIITTTTTIIIIIIIIITTTTTTTTTTIIIIIIIIIlIIIIIIIITTTT /#####!!!!!!!\~-_#######%%%!!!!!!\_    IIIIITTTTTTTTTTIIIIIIIIIlIIIIIIIITTTTIIIIilIIIIITTTTTTTIIIIIIIIIIIIITTTTTIIII
+        IIIIIIIIITTTTTTTTTTTTTIIIIIIIITTTTTTTTIIIIIITTTTTTTTTTTTTTIIIIIIIIIIIIIITTTTT/#############!!!\#########%%%!!!!!!\  IIIIITTTTTTTTTTTTTTIIIIIIIIIIIIIITTTTTIIIIIIIIITTTTTTTTTTTTTIIIIIIIITTTTTTTTII
         </pre>
-
-<!--ATTEMPT -->
-        <!-- <pre id="borfCastle">
-               _                                                             z
-              /#\                                                            z
-             /###\     /\                                                    z
-            /  ###\   /##\  /\                                               z
-           /      #\ /####\/##\                                              z
-          /  /      /   # /  ##\             _       /\                      z
-        // //  /\  /    _/  /  #\ _         /#\    _/##\    /\               z
-       // /   /  \     /   /    #\ \      _/###\_ /   ##\__/ _\              z
-      /  \   / .. \   / /   _   { \ \   _/       / //    /    \\             z
-/\     /    /\  ...  \_/   / / \   } \ | /  /\  \ /  _    /  /    \ /\       z
-_ /  \  /// / .\  ..%:.  /... /\ . \ {:  \\   /. \     / \  /   ___   /  \   z
-/.\ .\.\// \/... \.::::..... _/..\ ..\:|:. .  / .. \\  /.. \    /...\ /  \ \ z
-/...\.../..:.\. ..:::::::..:..... . ...\{:... / %... \\/..%. \  /./:..\__   \z
-.:..\:..:::....:::;;;;;;::::::::.:::::.\}.....::%.:. \ .:::. \/.%:::.:..\    z
-::::...:::;;:::::;;;;;;;;;;;;;;:::::;;::{:::::::;;;:..  .:;:... ::;;::::..   z
-;;;;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;];;;;;;;;;;::::::;;;;:.::;;;;;;;;:..z
-;;;;;;;;;;;;;;ii;;;;;;;;;;;;;;;;;;;;;;;;[;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;z
-;;;;;;;;;;;;;;;;;;;iiiiiiii;;;;;;;;;;;;;;};;ii;;iiii;;;;i;;;;;;;;;;;;;;;ii;;;z
-iiii;;;iiiiiiiiiiIIIIIIIIIIIiiiiiIiiiiii{iiIIiiiiiiiiiiiiiiii;;;;;iiiilliiiiiz
-IIIiiIIllllllIIlllIIIIlllIIIlIiiIIIIIIIIIIIIlIIIIIllIIIIIIIIiiiiiiiillIIIllIIz
-IIIiiilIIIIIIIllTIIIIllIIlIlIIITTTTlIlIlIIIlIITTTTTTTIIIIlIIllIlIlllIIIIIIITTz
-IIIIilIIIIITTTTTTTIIIIIIIIIIIIITTTTTIIIIIIIIITTTTTTTTTTIIIIIIIIIlIIIIIIIITTTTz
-IIIIIIIIITTTTTTTTTTTTTIIIIIIIITTTTTTTTIIIIIITTTTTTTTTTTTTTIIIIIIIIIIIIIITTTTTz
-        </pre> -->
-
-
-
-      <!-- <pre id="innImage">
-                  					     (   )
+        <pre id="innImage">
+                                 (   )
                                   (    )
                                    (    )
                                   (    )
@@ -164,7 +138,56 @@ IIIIIIIIITTTTTTTTTTTTTIIIIIIIITTTTTTTTIIIIIITTTTTTTTTTTTTTIIIIIIIIIIIIIITTTTTz
                        I II__I  I     XXXXXXX     I
                     ~~~~~"   "~~~~~~~~~~~~~~~~~~~~~~~~
 
-</pre> -->
+        </pre>
+        <pre id="forest">
+        %%%;
+        |  %%%;     %%%~%%%;                                                         %%%     %%%
+        # |__/__%%%____/_/~%;%                                                      %%%;     %%%~%%%;  |
+        ___%%;______%%;%                                                          ~%;% \__%%%____\_\~%;%
+        " " /~ %-//  \ \__%#%%_-%%;`                                                    ~ %-// _____
+        |  ~%-/_%` \ \_/%%#%%`                                                             ~%-/_%`___
+        #  | %%%#%     \__/%%#%%;%`,                                                       %%%#%      \" "
+        "| ;%%%;`                                                                         ;%%%;`       |
+        |	                                                                                       |#
+        | #|	                                                                    n	               |
+        ||	                                                                   / `\                |  "
+        |                                                                         (___:)               |  |
+        #  |	                .-'~~~-.                                           """"                |
+        "|	              .'o  oOOOo`.                                          ||                 |#
+        '  |	             :~~~-.oOo   o`.                                        ||                 |  "
+        |	             `. \ ~-.  oOOo.                                        ))	               |'
+        " |    ___             `.; / ~.  OO:                                       //                  | "
+        |    // __`\  o o ~    .'  ;-- `.o.'                                      ((                   |
+        |   ll ( .) l_) ) `.  ,'  ; ~~--'~                                         \\                  |
+        ' #|  __\\ \__/ /.    ;  ;                                                  ))                 |' #
+        '\ _/_/________/^^. \\;_\\//___\|/.  \\/ ._\//_/__/  ,\_//__\\/.  \_//__/_  ||	\\//___\|/.     /
+        """""                                  """"""""""""
+        </pre>
+        <pre id="throneRoom">
+        /|     -_-                                             _-  |\                   (    )              /|     -_-                                             _-  |\     
+        / |_-_- _                                         -_- _-   -| \                 ((((()))            / |_-_- _                                         -_- _-   -| \ 
+          |                            _-  _--                      |                   |o\ /o)|              |                            _-  _--                      |   
+          |                            ,                            |.                  ( (  _’).             |                            ,                            |.  
+          |      .-'````````'.        '(`        .-'```````'-.      |.                   (._.  /\__.          |      .-'````````'.        '(`        .-'```````'-.      |.   
+          |    .` |           `.      `)'      .` |           `.    |                   ,\___,/ '  ‘).        |    .` |           `.      `)'      .` |           `.    |  
+          |   /   |   ()        \      U      /   |    ()       \   |.    '.,_,,       (  .- .   .    ).      |   /   |   ()        \      U      /   |    ()       \   |.
+          |  |    |    ;         | o   T   o |    |    ;         |  |.     \   \\     ( '        )(    ).     |  |    |    ;         | o   T   o |    |    ;         |  |.
+          |  |    |     ;        |  .  |  .  |    |    ;         |  |.      \   \\    \.  _.__ ____( .  |     |  |    |     ;        |  .  |  .  |    |    ;         |  |.
+          |  |    |     ;        |   . | .   |    |    ;         |  |.       \  /\\   .(   .'  /\  '.  ).     |  |    |     ;        |   . | .   |    |    ;         |  |.
+          |  |    |     ;        |    .|.    |    |    ;         |  |         \(  \\.-' ( /    \/    \).      |  |    |     ;        |    .|.    |    |    ;         |  |
+          |  |    |____;_________|     |     |    |____;_________|  |           '  ()) _’.-|/\/\/\/\/\|.      |  |    |____;_________|     |     |    |____;_________|  | 
+          |  |   /  __ ;   -     |     !     |   /     `'() _ -  |  |.             '\\ .( |\/\/\/\/\/|.       |  |   /  __ ;   -     |     !     |   /     `'() _ -  |  |.   
+          |  |  / __  ()        -|        -  |  /  __--      -   |  |                '((  \    /\    /.       |  |  / __  ()        -|        -  |  /  __--      -   |  |
+          |  | /        __-- _   |   _- _ -  | /        __--_    |  |.               ((((  ‘.__\/__.’).       |  | /        __-- _   |   _- _ -  | /        __--_    |  |.
+          |__|/__________________|___________|/__________________|__|.                ((,) /   ((()   ).      |__|/__________________|___________|/__________________|__|.  
+         /                                             _ -        lc \                 "..-,  (()("   /.     /                                             _ -        lc \
+        /   -_- _ -             _- _---                       -_-  -_ \                 _//.   ((() ."      /   -_- _ -             _- _---                       -_-  -_ \ 
+                                                                                    _ //,/"     ((( ', _.
+                                                                                                 ((  ).
+                                                                                                  / /.
+                                                                                                _/,/‘.
+                                                                                               /,/,"
+        </pre>
 
 
       </div>
@@ -251,8 +274,9 @@ IIIIIIIIITTTTTTTTTTTTTIIIIIIIITTTTTTTTIIIIIITTTTTTTTTTTTTTIIIIIIIIIIIIIITTTTTz
           <div id="1">
             <!-- Choose a companion -->
             <p class="hidden">You</p>
-            <button type="button" class="a" value = "100">Drunk</button> <!-- go to page 2-->
-            <button type="button" class="b" value= "30">Scholar</button> <!-- go to page 3-->
+            <button type="button" class="stat strength option1" value = "20" name="drunk">Strength</button> <!-- go to page 2-->
+            <button type="button" class="stat agility option2" value= "20" name="scholar">Scholar</button> <!-- go to page 3-->
+
 
           </div>
           <div id="2">

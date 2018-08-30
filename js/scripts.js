@@ -68,7 +68,7 @@ var statCheck = function (characterStat, statCheckNumber, characterRoll) {
 //INN 1-7//
 var storyArray = [[2,3],[4,9],[8,5],[9,6],[8,7],[0,0],[0,0],
 //FOREST 8-20//
-[10],[11],[19,12],[20,13],[15,18,14,18],[17,18,16,18],[49],[49],[21],[21],[0,0],[40],[29],
+[10],[11],[19,12],[20,13],[15,18,14,18],[17,18,16,18],[48],[48],[21],[21],[0,0],[40],[29],
 //castle 21-58//
 [23,22],[24,25],[24,25],[34,24,34,23,34,24,34,24],[27,28],[34,26,34,26,34,26,34,26],[34,27,34,27,34,27,34,27],[39,59],
 [26,30,26,31,26,32,26,33],[34,30,34,30,34,30,34,30],[34,31,34,31,34,31,34,31],[34,32,34,32,34,32,34,32],[34,33,34,33,34,33,34,33],
@@ -176,7 +176,7 @@ var raiseStat = function(buttonClass, statValue, character) {
   }
 };
 
-$(document).ready(function(){
+$(document).ready(function() {
   $(".container-fluid").hide();
   $("button#playNow").click(function(){
     $(".splash").hide();
@@ -265,7 +265,7 @@ $(document).ready(function(){
     });
     $(".stat").click(function(){
       $(".printText").empty();
-      var rollRequired = parseInt($(this).val())
+      var rollRequired = (parseInt($(this).val()-10))
       var buttonClass = $(this).attr("class");
       var checkedStat = checkedStatValue(buttonClass, newCharacter)
       var statName = checkedStatName(buttonClass, newCharacter)
@@ -276,12 +276,10 @@ $(document).ready(function(){
       setTimeout(function () { $(".testButton").show(); }, 750);
       $("#statCheckButton").click(function() {
         var currentRoll = dice();
-
         $(".testButton").empty();
         $(".printText").append("<br>")
         $('.testButton').append('<button id="statRollButton" type="button">Ok</button>')
         showTextStats($(".printText"), 'Your roll was ' + currentRoll + "." + " Your total " + statName + " is " + (currentRoll + checkedStat) + ".", 0);
-
         $("#statRollButton").click(function() {
           $('.testButton').empty();
           if (buttonClass.includes("option1")){
@@ -293,14 +291,12 @@ $(document).ready(function(){
               lowerStat(buttonClass, checkedStat, newCharacter);
               var aPage = storyArray[currentPage-1][1]
             }
-            $(".current-story").append($("#" + aPage))
             if (newCharacter.deathCheck() === true) {
               currentPage = storyArray[3][1];
-              console.log(newCharacter, newCharacter.deathCheck())
             } else {
-              console.log(newCharacter, newCharacter.deathCheck())
               currentPage = aPage;
             }
+            $(".current-story").append($("#" + aPage))
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }
@@ -313,12 +309,12 @@ $(document).ready(function(){
               lowerStat(buttonClass, checkedStat, newCharacter);
               var aPage = storyArray[currentPage-1][3]
             }
-            $(".current-story").append($("#" + aPage))
             if (newCharacter.deathCheck() === true) {
               currentPage = storyArray[3][1];
             } else {
               currentPage = aPage;
             }
+            $(".current-story").append($("#" + aPage))
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }
@@ -331,12 +327,12 @@ $(document).ready(function(){
               lowerStat(buttonClass, checkedStat, newCharacter);
               var aPage = storyArray[currentPage-1][5]
             }
-            $(".current-story").append($("#" + aPage))
             if (newCharacter.deathCheck() === true) {
               currentPage = storyArray[3][1];
             } else {
               currentPage = aPage;
             }
+            $(".current-story").append($("#" + aPage))
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }
@@ -349,12 +345,12 @@ $(document).ready(function(){
               lowerStat(buttonClass, checkedStat, newCharacter);
               var aPage = storyArray[currentPage-1][7]
             }
-            $(".current-story").append($("#" + aPage))
             if (newCharacter.deathCheck() === true) {
               currentPage = storyArray[3][1];
             } else {
               currentPage = aPage;
             }
+            $(".current-story").append($("#" + aPage))
             $(".printText").empty();
             showText($(".printText"), $("#" + currentPage + " .hidden").html(), 0);
           }

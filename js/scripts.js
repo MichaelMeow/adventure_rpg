@@ -97,6 +97,7 @@ var imageCheck = function (currentPage) {
   $("#innImage").hide();
   $("#forest").hide();
   $("#throneRoom").hide();
+  $("#placeHolder").hide();
   if (currentPage > 0 && currentPage < 8) {
     $("#innImage").show();
   } else if (currentPage > 7 && currentPage < 21) {
@@ -228,6 +229,7 @@ $(document).ready(function() {
     });
 
     $("#start").click(function() {
+      $("#placeHolder").hide();
       $("#innImage").show();
       $(".current-story").append($("#1"));
       $(".current-story").hide();

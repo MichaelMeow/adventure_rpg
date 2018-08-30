@@ -141,7 +141,6 @@ button:hover {
 #characterPortrait {
   font-size: .25em;
   margin-bottom: .5%;
-  /* line-height: 1em; */
 }
 
 #characterName {
@@ -178,6 +177,7 @@ button:hover {
   .row justify-content-xl-center {
     margin:auto 0;
   }
+
   .container-fluid {
     padding-top: 1%;
     padding-left: 3%;
@@ -219,6 +219,7 @@ button:hover {
 
   #borfPortrait {
     font-size: 7px;
+    margin-left: 3%
   }
 
   #riseOfBorf {
@@ -232,8 +233,10 @@ button:hover {
   }
 
   #borfCastle {
-    font-size: 7px;
-    margin-left: 30%;
+    font-size: 8px;
+    margin-left: 9%;
+    width: 1000px;
+    overflow: hidden;
   }
 
   #characterPortrait {
@@ -245,6 +248,22 @@ button:hover {
 
   #characterName {
     font-size: 40px;
+  }
+
+  #innImage {
+    font-size: 8px;
+    margin-left: 43%;
+  }
+
+  #forest {
+    font-size: 8px;
+    margin-left: 34%;
+  }
+
+  #throneRoom {
+    font-size: 8px;
+    margin-left: 12%;
+    width: 930px;
   }
 
 }

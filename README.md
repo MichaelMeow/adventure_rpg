@@ -1,4 +1,4 @@
-# **Goblin Quest: The Rise of Borf**
+[# **Goblin Quest: The Rise of Borf**](https://michaelmeow.github.io/adventure_rpg)
 
 #### _A Text-based Roleplaying Game, 08.30.2018_
 

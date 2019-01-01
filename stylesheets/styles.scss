@@ -1,21 +1,21 @@
-/* *{
+$mainColor: green;
+$secondaryColor: black;
+
+* {
   border: dashed 2px grey;
-} */
+  box-sizing: border-box;
+  margin: 0 auto;
+}
 
 body {
-  color: green;
-  background-color: black;
+  color: $mainColor;
+  background-color: $secondaryColor;
   font-family: 'VT323', monospace;
 }
 
-pre {
-  background: black;
-  color: green;
-}
-
-input{
-  background: black;
-  color: green;
+input, pre {
+  background: $secondaryColor;
+  color: $mainColor;
   border: none;
 }
 
@@ -24,13 +24,12 @@ button.a, button.b, button.stat {
 }
 
 button {
-  background-color: black;
-  border: 3px solid green;
+  background-color: $secondaryColor;
+  border: 3px solid $mainColor;
   border-radius: 5px;
   text-align: center;
   display: block;
-  margin: 0 auto;
-  color: green;
+  color: $mainColor;
   font-size: 30px;
   padding: 10px 30px;
 }
@@ -41,12 +40,11 @@ button:focus {
 
 button:hover {
   outline:0;
-  color: black;
-  background-color: green;
+  color: $secondaryColor;
+  background-color: $mainColor;
 }
 
 .container-fluid {
-  margin: 0 auto;
   padding-top: 1%;
   padding-left: 7%;
   padding-right: 7%;
@@ -58,20 +56,16 @@ button:hover {
   overflow:auto;
   height: 825px;
   margin-bottom: 3%;
-  margin: auto 0;
   line-height: 1.2em;
 }
 
 .col-md-auto {
   font-size: 40px;
   width: 300px;
-  margin: auto 0;
-  margin-top: 0;
   padding-right: 0;
 }
 
 .picture {
-  margin: 0 auto;
 }
 
 .characterStatsDisplay {
@@ -85,7 +79,6 @@ button:hover {
 
 .splash {
   text-align: center;
-  margin: auto 0;
 }
 
 .copyright {
@@ -99,19 +92,11 @@ button:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: green;
+  background-color: $mainColor;
   border-radius: 10px;
 }
 
-.hidden-story {
-  display: none;
-}
-
-.startButton {
-  display: none;
-}
-
-.characterBar {
+.hidden-story, .startButton, .characterBar {
   display: none;
 }
 
@@ -136,8 +121,7 @@ button:hover {
 #playNow {
   font-size: 20px;
   padding: 15px 32px;
-  border: 2px solid green;
-  margin: 0 auto;
+  border: 2px solid $mainColor;
 }
 
 #borfCastle {
@@ -174,11 +158,7 @@ button:hover {
   margin-left: 25%;
 }
 
-#createStats {
-  display: none;
-}
-
-#statResultDisplay {
+#createStats, #statResultDisplay {
   display: none;
 }
 
@@ -189,15 +169,10 @@ button:hover {
   }
 
   button {
-    border: 2px solid green;
+    border: 2px solid $mainColor;
     border-radius: 5px;
-    margin: 0 auto;
     font-size: 20px;
     padding: 10px 20px;
-  }
-
-  .row justify-content-xl-center {
-    margin:auto 0;
   }
 
   .container-fluid {
@@ -249,7 +224,7 @@ button:hover {
   #playNow {
     font-size: 18px;
     padding: 10px 20px;
-    border: 2px solid green;
+    border: 2px solid $mainColor;
   }
 
   #borfCastle {
@@ -262,7 +237,6 @@ button:hover {
   #characterPortrait {
     font-size: .25em;
     margin-bottom: .5%;
-    margin:auto 0;
     line-height: 1.25em;
   }
 

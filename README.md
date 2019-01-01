@@ -1,4 +1,4 @@
-# [**Goblin Quest: The Rise of Borf**](https://michaelmeow.github.io/adventure_rpg)
+# [**Goblin Quest: The Rise of Borf**](https://lukevandekieft.github.io/borf-quest)
 
 #### _A Text-based Roleplaying Game, 08.30.2018_
 
@@ -43,18 +43,28 @@ This application is a text-based roleplaying game. It is a classic, dungeon-craw
 
 ## Setup/Installation Requirements
 
-* Clone repository from [GitHub](https://github.com/MichaelMeow/adventure_rpg.git) to your computer
-* Open index.html file in your web browser
+* Get file from Github.
+
+      $ git clone https://github.com/lukevandekieft/borf-quest.git
+
+* Open index.html in project folder. No production version is available and no dependencies are needed for the dev version.
+
+* When editing styles make sure to compile Sass into basic CSS.
+
+      $ sass stylesheets/styles.scss:stylesheets/styles.css
 
 ## Support and contact details
 
-We would love to hear from you! If you have any issues with this application or have any suggestions on how it could be improved, please let me know.
-
-Email us at [ccook987@gmail.com](mailto:ccook987@gmail.com)
+If you have any suggestions or comments please forward them to Luke Vandekieft at vandekie@gmail.com
 
 ## Technologies Used
 
-This page was designed primarily with HTML, CSS with Bootstrap integration and JavaScript with jquery integration.
+* JavaScript
+* jQuery
+* HTML
+* CSS
+* Bootstrap library
+* Sass preprocessor
 
 ### License
 

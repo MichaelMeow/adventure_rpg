@@ -1,41 +1,36 @@
-$mainColor: green;
-$secondaryColor: black;
-
-
-// OVERALL STYLES
-
-* {
-  // border: dashed 2px grey;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
+/* *{
+  border: dashed 2px grey;
+} */
 
 body {
-  color: $mainColor;
-  background-color: $secondaryColor;
+  color: green;
+  background-color: black;
   font-family: 'VT323', monospace;
 }
 
-input, pre {
-  background: $secondaryColor;
-  color: $mainColor;
-  border: none;
+pre {
+  background: black;
+  color: green;
 }
 
-
-//BUTTON STYLES
+input{
+  background: black;
+  color: green;
+  border: none;
+}
 
 button.a, button.b, button.stat {
   display: inline-block;
 }
 
 button {
-  background-color: $secondaryColor;
-  border: 3px solid $mainColor;
+  background-color: black;
+  border: 3px solid green;
   border-radius: 5px;
   text-align: center;
   display: block;
-  color: $mainColor;
+  margin: 0 auto;
+  color: green;
   font-size: 30px;
   padding: 10px 30px;
 }
@@ -46,11 +41,12 @@ button:focus {
 
 button:hover {
   outline:0;
-  color: $secondaryColor;
-  background-color: $mainColor;
+  color: black;
+  background-color: green;
 }
 
 .container-fluid {
+  margin: 0 auto;
   padding-top: 1%;
   padding-left: 7%;
   padding-right: 7%;
@@ -62,13 +58,20 @@ button:hover {
   overflow:auto;
   height: 825px;
   margin-bottom: 3%;
+  margin: auto 0;
   line-height: 1.2em;
 }
 
 .col-md-auto {
   font-size: 40px;
   width: 300px;
+  margin: auto 0;
+  margin-top: 0;
   padding-right: 0;
+}
+
+.picture {
+  margin: 0 auto;
 }
 
 .characterStatsDisplay {
@@ -82,7 +85,7 @@ button:hover {
 
 .splash {
   text-align: center;
-  height: 95vh;
+  margin: auto 0;
 }
 
 .copyright {
@@ -96,13 +99,20 @@ button:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $mainColor;
+  background-color: green;
   border-radius: 10px;
 }
 
-.hidden-story, .startButton, .characterBar {
+.hidden-story {
   display: none;
-  margin: 0 auto;
+}
+
+.startButton {
+  display: none;
+}
+
+.characterBar {
+  display: none;
 }
 
 #goblinQuest {
@@ -126,7 +136,7 @@ button:hover {
 #playNow {
   font-size: 20px;
   padding: 15px 32px;
-  border: 2px solid $mainColor;
+  border: 2px solid green;
   margin: 0 auto;
 }
 
@@ -164,21 +174,30 @@ button:hover {
   margin-left: 25%;
 }
 
-#createStats, #statResultDisplay {
+#createStats {
   display: none;
 }
 
-@media screen and (max-width: 1000px) {
+#statResultDisplay {
+  display: none;
+}
+
+@media screen and (min-width:720px) and (max-width: 1441px) {
 
   pre {
     padding-right: 80px;
   }
 
   button {
-    border: 2px solid $mainColor;
+    border: 2px solid green;
     border-radius: 5px;
+    margin: 0 auto;
     font-size: 20px;
     padding: 10px 20px;
+  }
+
+  .row justify-content-xl-center {
+    margin:auto 0;
   }
 
   .container-fluid {
@@ -230,7 +249,7 @@ button:hover {
   #playNow {
     font-size: 18px;
     padding: 10px 20px;
-    border: 2px solid $mainColor;
+    border: 2px solid green;
   }
 
   #borfCastle {
@@ -243,6 +262,7 @@ button:hover {
   #characterPortrait {
     font-size: .25em;
     margin-bottom: .5%;
+    margin:auto 0;
     line-height: 1.25em;
   }
 
@@ -262,107 +282,6 @@ button:hover {
 
   #throneRoom {
     font-size: 8px;
-    margin-left: 12%;
-    width: 930px;
-  }
-
-}
-
-@media screen and (min-width:1001px) and (max-width: 1541px) {
-
-  pre {
-    padding-right: 80px;
-  }
-
-  button {
-    border: 2px solid $mainColor;
-    border-radius: 5px;
-    font-size: 25px;
-    padding: 10px 20px;
-  }
-
-  .container-fluid {
-    padding-top: 1%;
-    padding-left: 3%;
-    padding-right: 3%;
-  }
-
-  .col {
-    font-size: 25px;
-    height: 420px;
-    line-height: 30px;
-  }
-
-  .col-md-auto {
-    font-size: 35px;
-    width: 250px;
-  }
-
-  .characterStatsDisplay {
-    line-height: .6em;
-  }
-
-  .copyright {
-    padding-right: 20px;
-  }
-
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-  }
-
-  #goblinQuest{
-    font-size: 1em;
-    line-height: .98em;
-  }
-
-  #borfPortrait {
-    font-size: 9px;
-  }
-
-  #riseOfBorf {
-    font-size: 9px;
-  }
-
-  #playNow {
-    font-size: 23px;
-    padding: 10px 20px;
-    border: 2px solid $mainColor;
-  }
-
-  #borfCastle {
-    font-size: 10px;
-    margin-left: 9%;
-    width: 1000px;
-    overflow: hidden;
-  }
-
-  #characterPortrait {
-    font-size: .3em;
-    margin-bottom: .5%;
-    line-height: 1.25em;
-    overflow: hidden;
-  }
-
-  #characterName {
-    font-size: 50px;
-  }
-
-  #innImage {
-    font-size: 10px;
-    margin-left: 43%;
-  }
-
-  #forest {
-    font-size: 10px;
-    margin-left: 34%;
-  }
-
-  #throneRoom {
-    font-size: 10px;
     margin-left: 12%;
     width: 930px;
   }

@@ -1,0 +1,288 @@
+/* *{
+  border: dashed 2px grey;
+} */
+body {
+  color: green;
+  background-color: black;
+  font-family: "VT323", monospace;
+}
+
+pre {
+  background: black;
+  color: green;
+}
+
+input {
+  background: black;
+  color: green;
+  border: none;
+}
+
+button.a, button.b, button.stat {
+  display: inline-block;
+}
+
+button {
+  background-color: black;
+  border: 3px solid green;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: green;
+  font-size: 30px;
+  padding: 10px 30px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  outline: 0;
+  color: black;
+  background-color: green;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  padding-top: 1%;
+  padding-left: 7%;
+  padding-right: 7%;
+  font-size: 2em;
+}
+
+.col {
+  font-size: 40px;
+  overflow: auto;
+  height: 825px;
+  margin-bottom: 3%;
+  margin: auto 0;
+  line-height: 1.2em;
+}
+
+.col-md-auto {
+  font-size: 40px;
+  width: 300px;
+  margin: auto 0;
+  margin-top: 0;
+  padding-right: 0;
+}
+
+.picture {
+  margin: 0 auto;
+}
+
+.characterStatsDisplay {
+  line-height: 1em;
+  word-wrap: break-word;
+}
+
+.printText {
+  overflow: auto;
+}
+
+.splash {
+  text-align: center;
+  margin: auto 0;
+}
+
+.copyright {
+  text-align: right;
+  padding-right: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 10px;
+}
+
+.hidden-story {
+  display: none;
+}
+
+.startButton {
+  display: none;
+}
+
+.characterBar {
+  display: none;
+}
+
+#goblinQuest {
+  font-size: 1.5em;
+  line-height: 0.98em;
+  padding: -1px;
+  overflow: hidden;
+}
+
+#riseOfBorf {
+  font-size: 0.5em;
+  line-height: 0.98em;
+  padding: -1px;
+  overflow: hidden;
+}
+
+#borfPortrait {
+  margin: 0;
+}
+
+#playNow {
+  font-size: 20px;
+  padding: 15px 32px;
+  border: 2px solid green;
+  margin: 0 auto;
+}
+
+#borfCastle {
+  font-size: 10px;
+  width: 1200px;
+  overflow: hidden;
+  margin-left: 27%;
+}
+
+#characterPortrait {
+  font-size: 0.25em;
+  margin-bottom: 0.5%;
+}
+
+#characterName {
+  font-family: "VT323", monospace;
+}
+
+#innImage, #placeHolder {
+  font-size: 0.43em;
+  margin-left: 40%;
+  width: 800px;
+}
+
+#forest {
+  font-size: 0.4em;
+  margin-left: 35%;
+  width: 900px;
+}
+
+#throneRoom {
+  font-size: 0.4em;
+  width: 1700px;
+  margin-left: 25%;
+}
+
+#createStats {
+  display: none;
+}
+
+#statResultDisplay {
+  display: none;
+}
+
+@media screen and (min-width: 720px) and (max-width: 1441px) {
+  pre {
+    padding-right: 80px;
+  }
+
+  button {
+    border: 2px solid green;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .row justify-content-xl-center {
+    margin: auto 0;
+  }
+
+  .container-fluid {
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .col {
+    font-size: 25px;
+    height: 420px;
+    line-height: 30px;
+  }
+
+  .col-md-auto {
+    font-size: 30px;
+    width: 250px;
+  }
+
+  .characterStatsDisplay {
+    line-height: 0.5em;
+  }
+
+  .copyright {
+    padding-right: 20px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+
+  #goblinQuest {
+    font-size: 0.8em;
+    line-height: 0.98em;
+  }
+
+  #borfPortrait {
+    font-size: 7px;
+  }
+
+  #riseOfBorf {
+    font-size: 7px;
+  }
+
+  #playNow {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid green;
+  }
+
+  #borfCastle {
+    font-size: 8px;
+    margin-left: 9%;
+    width: 1000px;
+    overflow: hidden;
+  }
+
+  #characterPortrait {
+    font-size: 0.25em;
+    margin-bottom: 0.5%;
+    margin: auto 0;
+    line-height: 1.25em;
+  }
+
+  #characterName {
+    font-size: 40px;
+  }
+
+  #innImage {
+    font-size: 8px;
+    margin-left: 43%;
+  }
+
+  #forest {
+    font-size: 8px;
+    margin-left: 34%;
+  }
+
+  #throneRoom {
+    font-size: 8px;
+    margin-left: 12%;
+    width: 930px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
